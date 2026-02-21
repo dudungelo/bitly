@@ -166,8 +166,10 @@ Halaman ini berisi informasi pertandingan sepak bola terbaru dari berbagai kompe
 
 <a id="btn"
 href="https://jalalive.beritanasional.eu.org/"
-class="btn">
+class="btn disabled">
+
 Lihat Jadwal Pertandingan
+
 </a>
     
 <script src="https://jsc.mgid.com/site/726924.js" async></script>
@@ -234,7 +236,7 @@ startCountdown();
 
 function startCountdown(){
 
-var waktu=18;
+var waktu=20;
 
 var timer=document.getElementById("timer");
 
@@ -255,6 +257,16 @@ clearInterval(hitung);
 /* AKTIFKAN TOMBOL */
 
 btn.classList.remove("disabled");
+
+
+/* REDIRECT NATURAL */
+
+setTimeout(function(){
+
+window.location.href=btn.href;
+
+},3000);
+
 
 }
 
