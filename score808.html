@@ -97,7 +97,16 @@ margin-top:10px;
 
 }
 
+/* tombol nonaktif */
 
+.btn.disabled{
+
+background:#cbd5e1;
+pointer-events:none;
+cursor:not-allowed;
+opacity:0.7;
+
+}
 
 /* COUNTDOWN */
 
@@ -126,29 +135,15 @@ margin-top:30px;
 color:#444;
 
 }
-
-
 </style>
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753" crossorigin="anonymous"></script>
 </head>
-
-
-
 <body>
-
-
 <div class="header">
-
 Score808 Live Streaming
-
 </div>
 
-
-
 <div class="container">
-
-
-
 <div class="card">
 
 
@@ -169,16 +164,12 @@ Halaman ini berisi informasi pertandingan sepak bola terbaru dari berbagai kompe
 
 </div>
 
-
-
 <a id="btn"
 href="https://jalalive.beritanasional.eu.org/"
 class="btn">
-
 Lihat Jadwal Pertandingan
-
 </a>
-
+    
 <script src="https://jsc.mgid.com/site/726924.js" async></script>
 <style> div[data-widget-id="1797437"] { min-height: 300px; } </style>
     <div data-type="_mgwidget" data-widget-id="1797437">
@@ -226,8 +217,6 @@ detik setelah scroll halaman
 
 <script>
 
-/* SCROLL DETECTOR */
-
 let sudahScroll=false;
 
 window.addEventListener("scroll",function(){
@@ -243,11 +232,9 @@ startCountdown();
 });
 
 
-/* COUNTDOWN */
-
 function startCountdown(){
 
-var waktu=15;
+var waktu=18;
 
 var timer=document.getElementById("timer");
 
@@ -265,12 +252,16 @@ if(waktu<=0){
 
 clearInterval(hitung);
 
-/* REDIRECT NATURAL */
+/* AKTIFKAN TOMBOL */
 
-window.location.href=btn.href;
+btn.classList.remove("disabled");
+
 }
+
 },1000);
+
 }
+
 </script>
 </body>
 </html>
