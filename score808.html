@@ -311,13 +311,25 @@ margin-top:40px;
   target="_blank" rel="nofollow noopener">
    Lihat Jadwal Sekarang
 </a>
+     <br/>
+     <h2>Data Skor Pertandingan</h2>
+<iframe title='live skor' id='score808frame2' loading='lazy' scrolling='no' src='https://official.tigoals.my.id/p/livescore-today.html' style='width: 100%; border: none;'></iframe></div>
+     
 </div>
 
 <footer class="footer">
-© 2026 Portal Informasi Sepak Bola • Semua hak dilindungi
+© 2026 Portal Informasi Sepak Bola Score808• Semua hak dilindungi
 </footer>
 
 </div>
-
+  <script>
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://official.tigoals.my.id") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+  </script>
 </body>
 </html>
