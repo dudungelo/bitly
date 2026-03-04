@@ -308,7 +308,8 @@ class="download-btn">
 Tunggu beberapa detik sebelum dimulai
 </div>
 
-
+<div data-type="_mgwidget" data-widget-id="1797438"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
 
 <!-- LIST SOURCE -->
 
@@ -316,38 +317,35 @@ Tunggu beberapa detik sebelum dimulai
 <div class="source-item">
 
 <span class="source-name">
-Safelink Modern Blogger
+Demo Video Youtube
 </span>
 
-<a href="https://www.google.com/search?q=Candil+Code&utm_source=Kumpulan+Source+Code+Aplikasi+Gratis"
+<a href="https://www.youtube.com/@CandilRiyadi"
 class="small-btn">
-Download
-</a>
-
-</div>
-
-
-
-<div class="source-item">
-<span class="source-name">
-Template Jadwal Bola API
-</span>
-
-<a href="https://www.google.com/search?q=Candil+Code&utm_source=Kumpulan+Source+Code+Aplikasi+Gratis"
-class="small-btn">
-Download
+Subscribe
 </a>
 </div>
 
 <div class="source-item">
 <span class="source-name">
-Poster Bola Generator
+
 </span>
 
-<a href="https://www.google.com/search?q=Candil+Code&utm_source=Kumpulan+Source+Code+Aplikasi+Gratis"
+<a href="https://candilkuya.com/"
+class="small-btn">
+Jasa Website
+</a>
+</div>
+
+<div class="source-item">
+<span class="source-name">
+Telegram Grup
+</span>
+
+<a href="https://t.me/candilcode"
 class="small-btn">
 
-Download
+Join
 
 </a>
 
@@ -363,10 +361,10 @@ Live Streaming Page
 
 </span>
 
-<a href="https://www.google.com/search?q=Candil+Code&utm_source=Kumpulan+Source+Code+Aplikasi+Gratis"
+<a href="https://bitly.candil.eu.org/score808"
 class="small-btn">
 
-Download
+Watch
 
 </a>
 
@@ -393,10 +391,6 @@ Download
 <p>Silakan download template yang tersedia dan gunakan sesuai kebutuhan proyek Anda.</p>
 
 </div>
-
-
-
-
 <script>
 
 /* COUNTDOWN */
@@ -404,40 +398,26 @@ Download
 var timeLeft = 15;
 
 var timer = document.getElementById("timer");
-
 var btn = document.getElementById("downloadBtn");
-
 
 var countdown = setInterval(function(){
 
-timeLeft--;
+  timeLeft--;
+  timer.innerHTML = timeLeft;
 
-timer.innerHTML = timeLeft;
+  if(timeLeft <= 0){
 
-if(timeLeft <= 0){
+    clearInterval(countdown);
+    timer.innerHTML = "0";
 
-clearInterval(countdown);
+    // Aktifkan tombol saja
+    btn.classList.add("active");
+    btn.removeAttribute("disabled");
 
-timer.innerHTML = "0";
-
-
-btn.classList.add("active");
-
-
-/* AUTO REDIRECT */
-
-setTimeout(function(){
-
-window.location.href = btn.href;
-
-},2000);
-
-
-}
+  }
 
 },1000);
+
 </script>
-
-
 </body>
 </html>
