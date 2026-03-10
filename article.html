@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memuat Artikel... | Berita Score808pro News</title>
+  <meta name="description" content="Kabar terbaru dari Score808pro News.">
+  <link rel="canonical" href="">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:site_name" content="Score808pro">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="">
+    <link href='https://official.kabarkarawang.com/favicon.ico' rel='icon' type='image/x-icon'/>
+
+ <style>
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: #111827;
+}
+
+.date {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 1rem;
+  color: #374151;
+}
+
+
+/* Responsive Typography */
+@media (min-width: 640px) {
+  h1 { font-size: 2rem; }
+  p { font-size: 1.125rem; }
+}
+
+/* ====== CSS untuk header ala Vidio ====== */
+
+
+/* FOOTER */
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+  </style>
+  <style>
+:root {
+  --vidio-red: #e11b22;
+  --vidio-text: #444;
+  --vidio-font: "Poppins", sans-serif;
+}
+
+.vidio-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.vidio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px; /* lebih ramping */
+  height: 55px;
+}
+
+/* Logo */
+.vidio-logo img {
+  height: 22px; /* kecilkan logo */
+  display: block;
+}
+
+/* Navigation */
+.vidio-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+}
+.vidio-nav a {
+  text-decoration: none;
+  color: var(--vidio-text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.vidio-nav a:hover {
+  color: var(--vidio-red);
+}
+
+/* Right: Search & Login */
+.vidio-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.vidio-search {
+  position: relative;
+}
+.vidio-search input {
+  padding: 4px 28px 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-size: 13px;
+  outline: none;
+  width: 130px;
+  transition: all 0.3s;
+}
+.vidio-search input:focus {
+  border-color: var(--vidio-red);
+  width: 180px;
+}
+.vidio-search button {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.vidio-login {
+  background: var(--vidio-red);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+.vidio-login:hover {
+  background: #c91017;
+}
+
+/* Toggle (Mobile) */
+.vidio-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 4px;
+}
+.vidio-toggle span {
+  width: 100%;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .vidio-nav {
+    display: none;
+  }
+  .vidio-toggle {
+    display: flex;
+  }
+  .vidio-nav.active {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    border-top: 1px solid #eee;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    padding: 10px 0;
+    animation: fadeIn 0.3s ease;
+  }
+  .vidio-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .vidio-search {
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+   <script src="https://jsc.mgid.com/site/726924.js" async></script>
+</head>
+<body>
+<!-- Header ala Vidio.com -->
+<!-- ========== HEADER RAMPING MODERN ALA VIDIO.COM ========== -->
+<header class="vidio-header">
+  <div class="vidio-container">
+    <!-- Left: Logo -->
+    <div class="vidio-logo">
+      <a href="/">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhbJX7k8ev3saWhimnfzxi0cFL1wu0DjVfM3m_nhZ1TjTspAew2dxOnbjS3P0QhDb2bMhHHY6QVn2mAF-rKc6N0Va7zsNJl7v-X8G7PMn33U6Wq-JcfzDcJM0mxOofRhx1vD_XuiQiggDEFrwLY9rdq61lnc66Ckg1vgf-3ri0Zp2WwhuQa82XCL4hSz0s=w300" alt="Logo Vidio">
+      </a>
+    </div>
+
+    <!-- Center: Navigation -->
+    <nav class="vidio-nav" id="vidioNav">
+      <ul>
+        <li><a href="https://bitly.candil.eu.org/score808">Beranda</a></li>
+        <li><a href="https://bitly.candil.eu.org/score808">Live</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#olahraga">Olahraga</a></li>
+        <li><a href="#hiburan">Hiburan</a></li>
+      </ul>
+    </nav>
+
+    <!-- Right: Search + Login -->
+    <div class="vidio-right">
+      <form class="vidio-search">
+        <input type="text" placeholder="Cari...">
+        <button type="submit" aria-label="Cari">
+          <svg width="18" height="18" fill="none" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="8" cy="8" r="6"></circle>
+            <line x1="18" y1="18" x2="13" y2="13"></line>
+          </svg>
+        </button>
+      </form>
+      <a href="https://t.me/score808alternative" class="vidio-login">Masuk</a>
+      <button class="vidio-toggle" id="vidioToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script><br/>
+  <h1 id="article-title">Memuat artikel Score808pro...</h1>
+
+  <div class="date" id="article-date"></div>
+  <img id="article-image" style="display:none;">
+  <div id="article-content">Memuat Berita Score808pro...</div>
+    <div data-type="_mgwidget" data-widget-id="1797439"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+     <h2 class="section-title">Hasil Bola</h2>
+<iframe id='score808frame' title='Score808pro news' scrolling='no' src='https://official.tigoals.my.id/p/hasil-pertandingan-score808.html' style='width: 100%; border: none;'></iframe>
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Score808pro . All rights reserved.</p>
+    <p><a href="https://www.beritanasional.eu.org" target="_blank">Score808 news</a></p>
+  </div>
+</footer>
+<script>
+function getParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+function updateMeta(title, description, image) {
+  const currentUrl = window.location.href;
+
+  document.title = `${title} | Score808pro News`;
+
+  document.querySelector('meta[name="description"]').setAttribute('content', description);
+  document.querySelector('link[rel="canonical"]').setAttribute('href', currentUrl);
+
+  document.querySelector('meta[property="og:title"]').setAttribute('content', title);
+  document.querySelector('meta[property="og:description"]').setAttribute('content', description);
+  document.querySelector('meta[property="og:image"]').setAttribute('content', image);
+  document.querySelector('meta[property="og:url"]').setAttribute('content', currentUrl);
+
+  document.querySelector('meta[name="twitter:title"]').setAttribute('content', title);
+  document.querySelector('meta[name="twitter:description"]').setAttribute('content', description);
+  document.querySelector('meta[name="twitter:image"]').setAttribute('content', image);
+}
+
+
+function fetchArticle() {
+  const relativeUrl = getParam('url');
+  if (!relativeUrl) {
+    document.getElementById('article-content').innerHTML = '<p>Artikel tidak ditemukan.</p>';
+    return;
+  }
+
+  const feedUrl = 'https://www.cnnindonesia.com/olahraga/rss';
+
+  fetch(feedUrl)
+    .then(res => res.text())
+    .then(str => new DOMParser().parseFromString(str, "text/xml"))
+    .then(data => {
+      const items = Array.from(data.querySelectorAll("item"));
+      const fullUrl = 'https://www.cnnindonesia.com/' + decodeURIComponent(relativeUrl);
+
+      const item = items.find(el => {
+        const link = el.querySelector("link")?.textContent || "";
+        return link.includes(relativeUrl);
+      });
+
+      if (!item) {
+        document.getElementById('article-content').innerHTML = '<p>Artikel tidak ditemukan.</p>';
+        return;
+      }
+
+      const title = item.querySelector("title")?.textContent || "Tanpa Judul";
+      const pubDate = new Date(item.querySelector("pubDate")?.textContent);
+      const descriptionHTML = item.querySelector("description")?.textContent || "";
+      const imageMatch = descriptionHTML.match(/<img[^>]+src="([^">]+)"/i);
+      const image = imageMatch ? imageMatch[1] : '';
+      const cleanDescription = descriptionHTML.replace(/<[^>]+>/g, '').substring(0, 160);
+
+document.getElementById('article-title').textContent = `${title} | Score808pro`;
+      document.getElementById('article-date').textContent = pubDate.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+      document.getElementById('article-content').innerHTML = `<p>Score808pro - ${cleanDescription}</p><p><a href="${fullUrl}" target="_blank">Baca selengkapnya</a></p>`;
+
+      if (image) {
+        const img = document.getElementById('article-image');
+        img.src = image;
+        img.alt = title;
+        img.style.display = 'block';
+      }
+
+      updateMeta(title, cleanDescription, image, fullUrl);
+
+      const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": title,
+        "image": [image],
+        "author": { "@type": "Organization", "name": "Berita Karawang" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Berita Karawang",
+          "logo": { "@type": "ImageObject", "url": "https://808.beritanasional.eu.org/favicon.ico" }
+        },
+        "mainEntityOfPage": fullUrl,
+        "datePublished": pubDate.toISOString(),
+        "dateModified": pubDate.toISOString(),
+        "url": fullUrl,
+        "description": cleanDescription
+      };
+
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(jsonLd);
+      document.head.appendChild(script);
+    })
+    .catch(() => {
+      document.getElementById('article-content').innerHTML = '<p>Gagal memuat artikel.</p>';
+    });
+}
+
+fetchArticle();
+
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://official.tigoals.my.id") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+</script>
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+</script>
+  <script>
+const vidioToggle = document.getElementById('vidioToggle');
+const vidioNav = document.getElementById('vidioNav');
+vidioToggle.addEventListener('click', () => vidioNav.classList.toggle('active'));
+</script>
+</body>
+</html>
