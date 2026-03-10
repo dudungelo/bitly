@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Berita Karawang Terbaru</title>
+   <link rel="shortcut icon" type="image/png" href="https://www.beritapelitakarawang.com/favicon.ico"/>
+  <!-- SEO Meta -->
+  <meta name="description" content="Baca berita terkini dan terpopuler seputar Karawang dari Pelita Karawang dan Sports Berita Kabar Karawang.">
+  <meta name="keywords" content="berita Karawang, Pelita Karawang, kabar Karawang, sports Karawang, berita hari ini">
+  <meta name="author" content="Kabar Karawang">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://news.beritapelitakarawang.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Kabar Karawang" />
+  <meta property="og:title" content="Berita Karawang Terbaru Hari Ini - Kabar Karawang" />
+  <meta property="og:description" content="Update berita terkini seputar Karawang dari berbagai sumber terpercaya.">
+  <meta property="og:image" content="https://www.beritapelitakarawang.com/favicon.ico" />
+  <meta property="og:url" content="https://news.beritapelitakarawang.com" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Berita Karawang Terbaru Hari Ini - Kabar Karawang" />
+  <meta name="twitter:description" content="Dapatkan kabar terbaru Karawang setiap hari. Akurat, cepat, terpercaya.">
+  <meta name="twitter:image" content="https://www.beritapelitakarawang.com/favicon.ico" />
+  <meta name="twitter:site" content="@KarawangKabar" />
+  <!-- Schema ItemList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Berita Karawang Terbaru",
+    "itemListElement": []
+  }
+  </script>
+<style>
+:root{
+--primary:#e91e63;
+--primary2:#ff6f61;
+--dark:#111827;
+--bg:#f4f6fb;
+--card:#ffffff;
+--text:#1f2937;
+--radius:14px;
+}
+
+*{
+box-sizing:border-box;
+}
+
+body{
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+margin:0;
+background:var(--bg);
+color:var(--text);
+line-height:1.6;
+}
+
+/* CONTAINER */
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 16px;
+}
+
+/* NAVBAR */
+
+.navbar{
+background:#fff;
+position:sticky;
+top:0;
+z-index:999;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+height:60px;
+}
+
+.logo a{
+font-weight:700;
+font-size:20px;
+text-decoration:none;
+color:var(--primary);
+}
+
+.nav-links{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.nav-links a,
+.nav-dropbtn{
+text-decoration:none;
+color:#333;
+font-weight:500;
+background:none;
+border:none;
+cursor:pointer;
+padding:8px;
+font-size:15px;
+}
+
+.nav-links a:hover{
+color:var(--primary);
+}
+
+/* DROPDOWN */
+
+.nav-dropdown{
+position:relative;
+}
+
+.nav-dropdown-content{
+display:none;
+position:absolute;
+top:120%;
+left:0;
+background:#fff;
+min-width:180px;
+border-radius:8px;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+overflow:hidden;
+}
+
+.nav-dropdown-content a{
+display:block;
+padding:10px 16px;
+color:#333;
+border-bottom:1px solid #eee;
+}
+
+.nav-dropdown-content a:hover{
+background:#fafafa;
+color:var(--primary);
+}
+
+.nav-dropdown:hover .nav-dropdown-content{
+display:block;
+}
+
+.nav-toggle{
+display:none;
+font-size:24px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+background:linear-gradient(135deg,var(--primary),var(--primary2));
+color:#fff;
+padding:70px 20px 50px;
+text-align:center;
+}
+
+.hero-title{
+font-size:clamp(2rem,5vw,3rem);
+font-weight:700;
+margin-bottom:10px;
+}
+
+.hero-subtitle{
+max-width:700px;
+margin:auto;
+opacity:.9;
+}
+
+/* NEWS GRID */
+
+.newsfeed{
+max-width:1100px;
+margin:30px auto;
+padding:0 16px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+/* CARD */
+
+.card{
+background:var(--card);
+border-radius:var(--radius);
+overflow:hidden;
+text-decoration:none;
+color:inherit;
+display:flex;
+flex-direction:column;
+transition:all .25s ease;
+box-shadow:0 6px 20px rgba(0,0,0,.05);
+}
+
+.card:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card .info{
+padding:14px;
+}
+
+.card h2{
+font-size:17px;
+margin:0 0 8px;
+line-height:1.4;
+}
+
+.card .date{
+font-size:13px;
+color:#777;
+}
+
+/* LOAD MORE */
+
+.load-more-container{
+text-align:center;
+margin:30px 0;
+}
+
+.load-more-btn{
+background:linear-gradient(135deg,var(--primary),var(--primary2));
+color:#fff;
+border:none;
+padding:12px 22px;
+border-radius:8px;
+font-size:15px;
+cursor:pointer;
+transition:.2s;
+}
+
+.load-more-btn:hover{
+opacity:.9;
+}
+
+.load-more-btn:disabled{
+background:#ccc;
+cursor:not-allowed;
+}
+
+/* LOADER */
+
+.loader{
+display:none;
+text-align:center;
+margin:20px auto;
+}
+
+.loader span{
+width:32px;
+height:32px;
+display:inline-block;
+border:4px solid var(--primary);
+border-top-color:transparent;
+border-radius:50%;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+/* ADS */
+
+.adsense-wrapper{
+margin:30px auto;
+text-align:center;
+max-width:1100px;
+}
+
+/* FOOTER */
+
+.site-footer{
+background:#111;
+color:#ccc;
+margin-top:50px;
+padding:40px 20px 20px;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.footer-section h4{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-section ul{
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.footer-section ul li{
+margin-bottom:6px;
+}
+
+.footer-section ul li a{
+color:#ccc;
+text-decoration:none;
+}
+
+.footer-section ul li a:hover{
+color:var(--primary);
+}
+
+.social-links a{
+margin-right:10px;
+color:#ccc;
+text-decoration:none;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:25px;
+padding-top:15px;
+border-top:1px solid #333;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.nav-links{
+position:absolute;
+top:60px;
+right:0;
+background:#fff;
+flex-direction:column;
+width:100%;
+max-height:0;
+overflow:hidden;
+transition:max-height .3s ease;
+border-bottom:1px solid #eee;
+}
+
+.nav-links.open{
+max-height:400px;
+}
+
+.nav-dropdown-content{
+position:static;
+box-shadow:none;
+}
+
+.nav-toggle{
+display:block;
+}
+
+.card img{
+height:160px;
+}
+
+}
+
+</style>
+  <script src="https://jsc.mgid.com/site/726924.js" async></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="container nav-inner">
+    <div class="logo"><a href="https://news.beritapelitakarawang.com">Berita Karawang</a></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="/">Beranda</a>
+      <div class="nav-dropdown">
+        <button class="nav-dropbtn">Kategori <span>▾</span></button>
+        <div class="nav-dropdown-content">
+          <a href="https://bitly.candil.eu.org/score808">Live</a>
+          <a href="https://official.kabarkarawang.com">Olahraga</a>
+          <a href="https://news.kabarkarawang.com/search/label/EKONOMI">Ekonomi</a>
+          <a href="https://news.kabarkarawang.com/search/label/DEWAN%20KARAWANG">Politik</a>
+        </div>
+      </div>
+      <a href="https://news.kabarkarawang.com/p/contact.html#">Tentang</a>
+      <a href="https://news.kabarkarawang.com/p/contact.html">Kontak</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle">☰</div>
+  </div>
+</header>
+<style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+  <div id="newsfeed" class="newsfeed"></div>
+  <div class="adsense-wrapper">
+   <div data-type="_mgwidget" data-widget-id="1797439"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+</div>
+  <div class="loader" id="loader"><span></span></div>
+  <div class="load-more-container">
+    <button id="loadMoreBtn" class="load-more-btn">Muat Lebih Banyak</button>
+  </div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>Tentang Kami</h4>
+      <p>Berita Karawang adalah portal berita harian terpercaya seputar Karawang dan sekitarnya.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/">Berita Karawang</a></li>
+        <li><a href="/">Daftar Isi</a></li>
+        <li><a href="/">Tentang</a></li>
+        <li><a href="/">Kontak</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Ikuti Kami</h4>
+      <div class="social-links">
+        <a href="https://www.facebook.com/kabarkarawangterkini" aria-label="Facebook">Facebook</a>
+        <a href="https://x.com/KarawangKabar" aria-label="Twitter">Twitter</a>
+        <a href="https://www.instagram.com/officialkabarkarawang/" aria-label="Instagram">Instagram</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 Berita Karawang. Semua Hak Dilindungi.</p>
+  </div>
+</footer>
+
+  <script>
+    const feeds = [
+      { key: 'pelita-karawang', url: 'https://pelitakarawang.com/feeds/posts/default?alt=json-in-script', start: 1 },
+      { key: 'sports', url: 'https://sports.beritapelitakarawang.com/feeds/posts/default?alt=json-in-script', start: 1 }
+    ];
+
+    const maxResults = 6;
+    const container = document.getElementById("newsfeed");
+    const loadMoreBtn = document.getElementById("loadMoreBtn");
+    const loader = document.getElementById("loader");
+    const schema = document.querySelector('script[type="application/ld+json"]');
+    let listIndex = 1;
+
+    function slugify(text) {
+      return text.toLowerCase()
+        .replace(/[^À-\u024f\w\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/--+/g, '-');
+    }
+
+    function fetchJsonp(url, callbackName, onSuccess) {
+      const script = document.createElement("script");
+      script.src = `${url}&callback=${callbackName}`;
+      document.body.appendChild(script);
+      window[callbackName] = function(data) {
+        document.body.removeChild(script);
+        delete window[callbackName];
+        onSuccess(data);
+      };
+    }
+
+    function renderCard(entry, sourceKey) {
+      const title = entry.title.$t;
+      const linkSlug = slugify(title);
+      const pubDate = new Date(entry.published.$t).toLocaleDateString("id-ID", {
+        day: "numeric", month: "long", year: "numeric"
+      });
+      const content = entry.content?.$t || entry.summary?.$t || '';
+      const imgMatch = content.match(/<img[^>]+src=\"([^\">]+)\"/i);
+      const image = imgMatch ? imgMatch[1] : "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj3TPuGZN0fgyDDUg-R07INSJt6NGt-kkzHxyUiyEXq8NiF_6XB4vCbhHvg90ZtNOo5u6UldPvNGFT-9sVjGfbHjTOFHXAMc3vo9-TMIm-ilv3n6gHQoOpYc_P1gDeludDZKw2iCdsdLmCbX9FfwAvlb_tcPBEaE63YHJHKDtcDnkTBLn0bT3qhTNuJCMAv/s1600-rw/No%20Image%20300%20x%20300.jpg";
+
+      const card = document.createElement("a");
+      card.className = "card";
+      card.href = `post.html?url=${sourceKey}/${linkSlug}`;
+      card.innerHTML = `
+        <img src="${image}" alt="${title}" title="${title}" loading="lazy"/>
+        <div class="info">
+          <h2>${title}</h2>
+          <div class="date">${pubDate}</div>
+        </div>
+      `;
+      container.appendChild(card);
+
+      // Tambah ke schema ItemList
+      const schemaData = JSON.parse(schema.textContent);
+      schemaData.itemListElement.push({
+        "@type": "ListItem",
+        "position": listIndex++,
+        "url": card.href
+      });
+      schema.textContent = JSON.stringify(schemaData);
+    }
+
+    function loadPosts() {
+      loader.style.display = "block";
+      let allDone = 0;
+
+      feeds.forEach((feed, i) => {
+        const jsonpCallback = `cb_feed_${i}_${feed.start}`;
+        const jsonpUrl = `${feed.url}&start-index=${feed.start}&max-results=${maxResults}`;
+
+        fetchJsonp(jsonpUrl, jsonpCallback, data => {
+          const entries = data.feed.entry || [];
+          if (entries.length === 0) {
+            allDone++;
+            if (allDone === feeds.length) {
+              loadMoreBtn.disabled = true;
+              loadMoreBtn.textContent = "Tidak ada lagi";
+            }
+            loader.style.display = "none";
+            return;
+          }
+
+          entries.forEach(entry => renderCard(entry, feed.key));
+          feed.start += maxResults;
+          loader.style.display = "none";
+        });
+      });
+    }
+
+    loadPosts();
+    loadMoreBtn.addEventListener("click", () => {
+      loadPosts();
+    });
+  const toggle = document.getElementById("navToggle");
+  const links = document.getElementById("navLinks");
+
+  toggle.addEventListener("click", () => {
+    links.classList.toggle("open");
+  });
+  </script>
+  <!--<script>
+//<![CDATA[
+function downloadJSAtOnload(){var d=document.createElement("script");d.src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3832718349816497";d.setAttribute("crossorigin","anonymous"),document.body.appendChild(d)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
+//]]>
+</script>-->
+</body>
+</html>
