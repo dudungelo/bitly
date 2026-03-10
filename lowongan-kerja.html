@@ -238,20 +238,31 @@ padding:0 16px;
 }
 
 .main-nav{
-gap:18px;
-padding:14px;
-justify-content:flex-start;
+display:flex;
+gap:20px;
+padding:14px 16px;
+background:#0f172a;
 overflow-x:auto;
-scrollbar-width:none;
-}
-
-.main-nav::-webkit-scrollbar{
-display:none;
+white-space:nowrap;
+scroll-behavior:smooth;
 }
 
 .main-nav a{
+color:#fff;
+text-decoration:none;
+font-weight:600;
 font-size:14px;
-white-space:nowrap;
+padding:6px 2px;
+flex-shrink:0;
+}
+
+/* sembunyikan scrollbar */
+.main-nav::-webkit-scrollbar{
+display:none;
+}
+.main-nav{
+-ms-overflow-style:none;
+scrollbar-width:none;
 }
 
 .article{
