@@ -23,6 +23,7 @@
 <style>
 :root{
 --primary:#16a34a;
+--primary2:#22c55e;
 --dark:#0f172a;
 --gray:#64748b;
 --bg:#f1f5f9;
@@ -515,41 +516,190 @@ height:160px;
 
 }
 .newsfeed{
-max-width:900px;
-margin:30px auto;
-padding:0 16px;
-display:flex;
-flex-direction:column;
-gap:14px;
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+gap:18px;
+margin-top:20px;
 }
+
 .card{
 display:block;
-padding:16px;
-border-radius:14px;
-background:#fff;
-margin-bottom:14px;
-box-shadow:0 6px 18px rgba(0,0,0,.08);
+padding:18px;
+border-radius:16px;
+background:#ffffff;
 text-decoration:none;
-color:#111;
-transition:.25s;
-    text-align: left;
+color:#111827;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+transition:all .25s ease;
+border:1px solid #f1f5f9;
 }
 
 .card:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 26px rgba(0,0,0,.12);
+transform:translateY(-5px);
+box-shadow:0 20px 35px rgba(0,0,0,.12);
+}
+
+.card h2{
+font-size:17px;
+line-height:1.4;
+margin-bottom:8px;
+font-weight:600;
 }
 
 .desc{
-color:#555;
-margin:6px 0 10px;
+color:#475569;
+margin-bottom:12px;
+line-height:1.5;
+text-align:left;
 }
 
 .meta{
-font-size:12px;
-color:#888;
 display:flex;
 gap:6px;
+font-size:12px;
+color:#94a3b8;
+}
+
+/* LOAD MORE BUTTON */
+
+.load-more-container{
+display:flex;
+justify-content:center;
+margin:40px 0;
+}
+
+.load-more-btn{
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
+border:none;
+padding:14px 28px;
+color:#fff;
+font-size:15px;
+border-radius:10px;
+cursor:pointer;
+font-weight:600;
+box-shadow:0 10px 25px rgba(37,99,235,.35);
+transition:.2s;
+}
+
+.load-more-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 14px 30px rgba(37,99,235,.45);
+}
+
+/* LOADER */
+
+.loader{
+display:flex;
+justify-content:center;
+margin:40px 0;
+}
+
+.loader span{
+width:40px;
+height:40px;
+border-radius:50%;
+border:4px solid #e2e8f0;
+border-top-color:#2563eb;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
+/* STICKY CTA PRO */
+
+.sticky-cta{
+
+position:fixed;
+bottom:-200px;
+left:50%;
+transform:translateX(-50%);
+z-index:9999;
+
+width:90%;
+max-width:520px;
+
+background:#ffffff;
+border-radius:16px;
+
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+transition:.4s;
+
+border:1px solid #e5e7eb;
+
+}
+
+.sticky-cta.show{
+bottom:20px;
+}
+
+.sticky-content{
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+
+padding:18px 20px;
+
+}
+
+.sticky-text h3{
+margin:0;
+font-size:16px;
+}
+
+.sticky-text p{
+margin:4px 0 0;
+font-size:13px;
+color:#64748b;
+}
+
+.sticky-btn{
+
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:#fff;
+padding:12px 20px;
+border-radius:10px;
+font-weight:600;
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(34,197,94,.4);
+
+}
+
+.sticky-btn:hover{
+transform:translateY(-2px);
+}
+
+.sticky-close{
+
+position:absolute;
+top:8px;
+right:10px;
+cursor:pointer;
+font-size:14px;
+color:#888;
+
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+.sticky-content{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.sticky-btn{
+width:100%;
+text-align:center;
+}
+
 }
 </style>
    
@@ -602,8 +752,8 @@ gap:6px;
 </article>
 
 <br>
-<div class="ads-area"></div><style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
-<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script></div>
+
+
   <div id="newsfeed" class="newsfeed"></div>
   
   <div class="loader" id="loader"><span></span></div>
@@ -614,17 +764,22 @@ gap:6px;
    <div data-type="_mgwidget" data-widget-id="1797439"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
 </div>
-<div class="card">
+<div id="stickyCTA" class="sticky-cta">
 
-<h2>Lihat Lowongan Kerja Terbaru</h2>
+<div class="sticky-content">
 
-<p>Temukan berbagai peluang kerja terbaru dari perusahaan terpercaya di Indonesia. Join Group Facebook</p>
+<div class="sticky-text">
+<h3>Lihat Lowongan Kerja Terbaru</h3>
+<p>Temukan peluang kerja terbaru dari perusahaan terpercaya.</p>
+</div>
 
-<br>
-
-<a href="#" class="btn">
-Lihat Daftar Lowongan
+<a href="https://www.facebook.com/groups/725721762860019" class="sticky-btn">
+Join
 </a>
+
+</div>
+
+<span class="sticky-close" id="closeSticky">✕</span>
 
 </div>
 
@@ -696,20 +851,6 @@ return {
 };
 
  });
-
-}
-
-async function loadFeeds(){
-
- const results = await Promise.all(FEEDS.map(fetchFeed));
-
- allPosts = results.flat();
-
- allPosts.sort((a,b)=> b.pubDate - a.pubDate);
-
- renderPosts();
-
- generateSchema();
 
 }
 
@@ -786,8 +927,48 @@ function generateSchema(){
 
 loadBtn.addEventListener("click",renderPosts);
 
-loadFeeds();
+const loader = document.getElementById("loader");
 
+async function loadFeeds(){
+
+loader.style.display="flex";
+
+const results = await Promise.all(FEEDS.map(fetchFeed));
+
+allPosts = results.flat();
+
+allPosts.sort((a,b)=> b.pubDate - a.pubDate);
+
+loader.style.display="none";
+
+renderPosts();
+
+generateSchema();
+
+}
+
+loadFeeds(); // WAJIB
+const sticky = document.getElementById("stickyCTA");
+const closeSticky = document.getElementById("closeSticky");
+
+let shown = false;
+
+window.addEventListener("scroll",()=>{
+
+const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+if(scrollPercent > 40 && !shown){
+
+sticky.classList.add("show");
+shown = true;
+
+}
+
+});
+
+closeSticky.onclick = ()=>{
+sticky.style.display="none";
+};
 </script>
 </body>
 </html>
