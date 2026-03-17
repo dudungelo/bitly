@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Match Center - Secure Access</title>
+
+<meta name="description" content="Akses halaman match center, livescore, dan update pertandingan secara aman dan cepat.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<link rel="canonical" href="/">
+
+<meta property="og:title" content="Match Center Access">
+<meta property="og:description" content="Halaman pengalihan aman menuju match center dan livescore.">
+<meta property="og:type" content="website">
+
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="https://cdn.jsdelivr.net/gh/score808pages/football808@main/image/livescore%20808.png">
+<!-- ADSENSE -->
+
+<style>
+
+/* GLOBAL */
+body{
+margin:0;
+font-family:Inter,system-ui,-apple-system,sans-serif;
+background:linear-gradient(135deg,#0f172a,#1e293b);
+display:flex;
+align-items:center;
+justify-content:center;
+height:100vh;
+color:#fff;
+}
+
+/* BOX */
+.safe-box{
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.1);
+padding:35px 25px;
+border-radius:20px;
+text-align:center;
+max-width:380px;
+width:100%;
+box-shadow:0 20px 50px rgba(0,0,0,.4);
+}
+
+/* TITLE */
+.safe-box h2{
+margin:0 0 10px;
+font-size:22px;
+font-weight:700;
+}
+
+/* TEXT */
+.safe-box p{
+font-size:14px;
+color:#cbd5f5;
+margin-bottom:15px;
+}
+
+/* ADS */
+.ads-top,
+.ads-bottom{
+    margin: 20px 0;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+}
+
+/* PROGRESS */
+.progress{
+height:6px;
+background:rgba(255,255,255,.1);
+border-radius:10px;
+overflow:hidden;
+margin:15px 0;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#00ff87,#00b86b);
+transition:width 1s linear;
+}
+
+/* BUTTON */
+#goBtn{
+width:100%;
+padding:12px;
+border:none;
+border-radius:12px;
+background:#1a73e8;
+color:#fff;
+font-size:14px;
+font-weight:600;
+cursor:pointer;
+opacity:.6;
+transition:.3s;
+}
+
+#goBtn.active{
+opacity:1;
+background:#22c55e;
+}
+
+#goBtn:hover.active{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(34,197,94,.4);
+}
+
+/* NOTE */
+.safe-note{
+font-size:11px;
+margin-top:12px;
+color:#94a3b8;
+}
+
+</style>
+  <script src="https://jsc.mgid.com/site/726924.js" async></script>
+</head>
+<body>
+
+<div class="safe-box">
+
+<!-- ADS TOP -->
+<div class="ads-top">
+<style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+</div>
+
+<h2>🔒 Match Center Access</h2>
+
+<p>Menyiapkan halaman tujuan, mohon tunggu sebentar...</p>
+
+<div class="progress">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<button id="goBtn">Memuat...</button>
+
+<!-- ADS BOTTOM -->
+<div class="ads-bottom">
+<div data-type="_mgwidget" data-widget-id="1878651"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+</div>
+
+<div class="safe-note">
+Sistem keamanan aktif untuk pengalaman terbaik
+</div>
+
+</div>
+
+<script>
+
+/* AMBIL PARAM URL */
+const params = new URLSearchParams(location.search);
+const encoded = params.get("url");
+
+let target = "#";
+
+/* VALIDASI BASE64 */
+try {
+  if (encoded && encoded.length > 10) {
+    target = decodeURIComponent(atob(encoded));
+  }
+} catch (e) {
+  console.log("URL tidak valid");
+  target = "#";
+}
+
+/* ELEMENT */
+const btn = document.getElementById("goBtn");
+const bar = document.getElementById("progressBar");
+
+/* ANIMASI SMOOTH */
+let duration = 15000; // 15 detik
+let start = null;
+
+function animate(timestamp){
+  if(!start) start = timestamp;
+
+  let progress = timestamp - start;
+  let percent = Math.min((progress / duration) * 100, 100);
+
+  bar.style.width = percent + "%";
+
+  let sisa = Math.ceil((duration - progress) / 1000);
+  if(sisa < 0) sisa = 0;
+
+  btn.innerText = sisa > 0 
+    ? "Tunggu " + sisa + " detik"
+    : "Buka Halaman";
+
+  if(progress < duration){
+    requestAnimationFrame(animate);
+  } else {
+    btn.disabled = false;
+    btn.classList.add("active");
+
+    btn.onclick = () => {
+      window.location.href = target;
+    };
+  }
+}
+
+/* START */
+btn.disabled = true;
+requestAnimationFrame(animate);
+
+</script>
+
+</body>
+</html>
