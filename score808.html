@@ -304,6 +304,81 @@ color:#64748b;
 border-top:1px solid rgba(255,255,255,.08);
 padding-top:10px;
 }
+     /* STICKY CTA */
+.sticky-cta{
+position:fixed;
+bottom:12px;
+left:50%;
+transform:translateX(-50%);
+width:calc(100% - 20px);
+max-width:520px;
+background:#0f172a;
+color:#fff;
+border-radius:14px;
+box-shadow:0 8px 25px rgba(0,0,0,.25);
+padding:12px 14px;
+z-index:999;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
+}
+
+/* CONTENT */
+.sticky-content{
+display:flex;
+align-items:center;
+gap:10px;
+flex:1;
+}
+
+/* TEXT */
+.sticky-text{
+display:flex;
+flex-direction:column;
+font-size:12px;
+line-height:1.3;
+}
+
+.sticky-text strong{
+font-size:13px;
+font-weight:700;
+}
+
+.sticky-text span{
+color:#cbd5f5;
+}
+
+/* BUTTON */
+.sticky-btn{
+background:#22c55e;
+color:#fff;
+padding:10px 14px;
+border-radius:10px;
+font-size:12px;
+font-weight:600;
+text-decoration:none;
+white-space:nowrap;
+transition:.2s;
+}
+
+.sticky-btn:hover{
+background:#16a34a;
+}
+
+/* CLOSE */
+.sticky-close{
+background:none;
+border:none;
+color:#94a3b8;
+font-size:16px;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:400px){
+.sticky-text span{display:none;}
+}
 </style>
 <!-- Schema -->
 <script type="application/ld+json">
@@ -451,7 +526,7 @@ padding-top:10px;
 <div class="legal-content">
 
 <p>
-Halaman ini menyajikan informasi jadwal pertandingan sepak bola, live score, serta referensi konten dari berbagai sumber publik.
+Halaman ini menyajikan informasi jadwal pertandingan sepak bola, live score, serta referensi konten dari berbagai sumber publik. Kami tidak menyediakan layanan streaming atau konten siaran langsung dalam bentuk apa pun.
 </p>
 
 <p>
@@ -461,8 +536,29 @@ Kami tidak meng-host, menyimpan, atau menyiarkan konten video dalam bentuk apa p
 <p>
 Untuk pengalaman terbaik dan kualitas tayangan resmi, pengguna disarankan mengakses platform penyiaran yang memiliki lisensi resmi.
 </p>
+</div>
 
 </div>
+     <!-- STICKY CTA -->
+<div id="stickyCTA" class="sticky-cta">
+
+  <div class="sticky-content">
+
+    <div class="sticky-text">
+     <strong>🔥 Live Score & Jadwal Hari Ini</strong>
+      <span>Dapatkan jadwal & live score langsung ke WhatsApp</span>
+    </div>
+
+    <a href="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" 
+       class="sticky-btn" 
+       rel="nofollow noopener" 
+       target="_blank">
+       Gabung
+    </a>
+
+  </div>
+
+  <button class="sticky-close" id="closeSticky" aria-label="Tutup">✕</button>
 
 </div>
 <footer class="footer">
@@ -493,6 +589,26 @@ window.location.href="safe.html?url="+encoded;
 
 });
 
+</script>
+     <script>
+const sticky = document.getElementById("stickyCTA");
+const closeBtn = document.getElementById("closeSticky");
+
+/* TAMPIL SETELAH 3 DETIK (BIAR GA GANGGU LCP) */
+setTimeout(()=>{
+  sticky.style.opacity = "1";
+},5000);
+
+/* CLOSE + SIMPAN */
+closeBtn.onclick = ()=>{
+  sticky.style.display = "none";
+  localStorage.setItem("hideCTA","1");
+};
+
+/* CEK LOCALSTORAGE */
+if(localStorage.getItem("hideCTA")){
+  sticky.style.display = "none";
+}
 </script>
 </body>
 </html>
