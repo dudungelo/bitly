@@ -17,90 +17,112 @@
 
 <meta name="theme-color" content="#0f172a">
 <link rel="icon" href="https://cdn.jsdelivr.net/gh/score808pages/football808@main/image/livescore%20808.png">
-<!-- ADSENSE -->
 
 <style>
-*{
-box-sizing:border-box;
-}
+*{box-sizing:border-box;margin:0;padding:0}
+
 /* GLOBAL */
 body{
-margin:0;
 font-family:Inter,system-ui,-apple-system,sans-serif;
 background:linear-gradient(135deg,#0f172a,#1e293b);
-display:flex;
-align-items:center;
-justify-content:center;
-height:100vh;
 color:#fff;
+-webkit-font-smoothing:antialiased;
 }
 
-/* BOX */
+/* WRAPPER */
+.wrapper{
+max-width:420px;
+margin:auto;
+padding:20px 15px;
+}
+
+/* HEADER */
+.header{
+text-align:center;
+margin-bottom:18px;
+}
+
+.logo{
+font-size:20px;
+font-weight:800;
+color:#22c55e;
+}
+
+.tagline{
+font-size:11px;
+color:#94a3b8;
+margin-top:4px;
+}
+
+/* ARTIKEL */
+.intro{
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.08);
+padding:14px;
+border-radius:12px;
+margin-bottom:16px;
+}
+
+.intro h1{
+font-size:16px;
+margin-bottom:6px;
+line-height:1.4;
+}
+
+.intro p{
+font-size:12px;
+color:#cbd5f5;
+line-height:1.5;
+}
+
+/* SAFE BOX */
 .safe-box{
 background:rgba(255,255,255,.05);
-backdrop-filter:blur(20px);
 border:1px solid rgba(255,255,255,.1);
-padding:35px 25px;
-border-radius:20px;
+padding:18px;
+border-radius:14px;
 text-align:center;
-max-width:380px;
-width:100%;
-box-shadow:0 20px 50px rgba(0,0,0,.4);
 }
 
 /* TITLE */
 .safe-box h2{
-margin:0 0 10px;
-font-size:22px;
-font-weight:700;
+font-size:16px;
+margin-bottom:8px;
 }
 
 /* TEXT */
 .safe-box p{
-font-size:14px;
+font-size:12px;
 color:#cbd5f5;
-margin-bottom:15px;
-}
-
-/* ADS */
-.ads-top,
-.ads-bottom{
-margin:20px 0;
-padding:8px;
-border-radius:12px;
-background:rgb(255 255 255);
-border:1px solid rgba(255,255,255,.08);
+margin-bottom:12px;
 }
 
 /* PROGRESS */
 .progress{
-height:6px;
+height:5px;
 background:rgba(255,255,255,.1);
 border-radius:10px;
 overflow:hidden;
-margin:15px 0;
+margin:12px 0;
 }
 
 .progress-bar{
 height:100%;
 width:0%;
 background:linear-gradient(90deg,#00ff87,#00b86b);
-transition:width 1s linear;
 }
 
 /* BUTTON */
 #goBtn{
 width:100%;
-padding:12px;
+padding:11px;
 border:none;
-border-radius:12px;
+border-radius:10px;
 background:#1a73e8;
 color:#fff;
-font-size:14px;
+font-size:13px;
 font-weight:600;
-cursor:pointer;
 opacity:.6;
-transition:.3s;
 }
 
 #goBtn.active{
@@ -108,111 +130,133 @@ opacity:1;
 background:#22c55e;
 }
 
-#goBtn:hover.active{
-transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(34,197,94,.4);
-}
-
 /* NOTE */
 .safe-note{
-font-size:11px;
-margin-top:12px;
+font-size:10px;
+margin-top:10px;
 color:#94a3b8;
 }
 
+/* ADS MGID */
+.ads{
+margin:12px 0;
+padding:6px;
+border-radius:10px;
+background:#fff;
+}
+
+/* MOBILE EXTRA */
+@media(max-width:360px){
+.intro h1{font-size:14px}
+.logo{font-size:18px}
+}
 </style>
+
   <script src="https://jsc.mgid.com/site/726924.js" async></script>
+
 </head>
 <body>
 
-<div class="safe-box">
+<div class="wrapper">
 
-<!-- ADS TOP -->
-<div class="ads-top">
-<style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">⚽ Match Akses</div>
+    <div class="tagline">Live Score • Jadwal • Hasil</div>
+  </div>
+
+  <!-- ARTIKEL -->
+  <div class="intro">
+    <h1>Live Score & Jadwal Bola Hari Ini</h1>
+    <p>
+      Pantau pertandingan sepak bola terbaru dari berbagai liga dunia. 
+      Akses cepat ke live score, jadwal kick-off, dan statistik lengkap.
+    </p>
+  </div>
+
+  <!-- ADS ATAS -->
+  <div class="ads">
+    <style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
-</div>
+  </div>
 
-<h2>🔒 Match Center Access</h2>
+  <!-- BOX -->
+  <div class="safe-box">
 
-<p>Menyiapkan halaman tujuan, mohon tunggu sebentar...</p>
+    <h2>🔒 Secure Access</h2>
 
-<div class="progress">
-<div class="progress-bar" id="progressBar"></div>
-</div>
+    <p>Menyiapkan halaman tujuan...</p>
 
-<button id="goBtn">Memuat...</button>
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
 
-<!-- ADS BOTTOM -->
-<div class="ads-bottom">
-<div data-type="_mgwidget" data-widget-id="1797438"></div>
+    <button id="goBtn">Memuat...</button>
+
+    <div class="safe-note">
+      Redirect aman & terenkripsi
+    </div>
+
+  </div>
+
+  <!-- ADS BAWAH -->
+  <div class="ads">
+   <div data-type="_mgwidget" data-widget-id="1797438"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
-</div>
-
-<div class="safe-note">
-Sistem keamanan aktif untuk pengalaman terbaik
-</div>
+  </div>
 
 </div>
 
 <script>
 
-/* AMBIL PARAM URL */
+/* MGID INIT */
+(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");
+
+/* PARAM */
 const params = new URLSearchParams(location.search);
 const encoded = params.get("url");
 
 let target = "#";
 
-/* VALIDASI BASE64 */
-try {
-  if (encoded && encoded.length > 10) {
-    target = decodeURIComponent(atob(encoded));
-  }
-} catch (e) {
-  console.log("URL tidak valid");
-  target = "#";
+try{
+if(encoded && encoded.length > 10){
+target = decodeURIComponent(atob(encoded));
 }
+}catch(e){}
 
 /* ELEMENT */
 const btn = document.getElementById("goBtn");
 const bar = document.getElementById("progressBar");
 
-/* ANIMASI SMOOTH */
-let duration = 15000; // 15 detik
+/* TIMER */
+let duration = 12000;
 let start = null;
 
-function animate(timestamp){
-  if(!start) start = timestamp;
+function animate(t){
+if(!start) start = t;
 
-  let progress = timestamp - start;
-  let percent = Math.min((progress / duration) * 100, 100);
+let progress = t - start;
+let percent = Math.min((progress/duration)*100,100);
 
-  bar.style.width = percent + "%";
+bar.style.width = percent + "%";
 
-  let sisa = Math.ceil((duration - progress) / 1000);
-  if(sisa < 0) sisa = 0;
+let sisa = Math.ceil((duration-progress)/1000);
+if(sisa < 0) sisa = 0;
 
-  btn.innerText = sisa > 0 
-    ? "Tunggu " + sisa + " detik"
-    : "Buka Halaman";
+btn.innerText = sisa>0 ? "Tunggu "+sisa+" detik" : "Buka Halaman";
 
-  if(progress < duration){
-    requestAnimationFrame(animate);
-  } else {
-    btn.disabled = false;
-    btn.classList.add("active");
-
-    btn.onclick = () => {
-      window.location.href = target;
-    };
-  }
+if(progress < duration){
+requestAnimationFrame(animate);
+}else{
+btn.disabled = false;
+btn.classList.add("active");
+btn.onclick = ()=> window.location.href = target;
+}
 }
 
-/* START */
 btn.disabled = true;
 requestAnimationFrame(animate);
 
 </script>
-
 </body>
 </html>
