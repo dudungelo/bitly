@@ -209,7 +209,102 @@ margin-top:40px;
   }
 
 }
+.source-list{
+display:flex;
+flex-direction:column;
+gap:10px;
+margin-top:10px;
+}
 
+.source-item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+border:1px solid #e5e7eb;
+padding:10px 14px;
+border-radius:8px;
+}
+
+.source-name{
+font-size:13px;
+font-weight:500;
+}
+
+.small-btn{
+background:#1a73e8;
+color:#fff;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+text-decoration:none;
+}
+
+.small-btn:hover{
+background:#1765cc;
+}
+.legal-box{
+margin-top:30px;
+padding:25px;
+border-radius:18px;
+background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.02));
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+position:relative;
+overflow:hidden;
+}
+
+/* glow effect */
+.legal-box::before{
+content:'';
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,#22c55e,#38bdf8,#a855f7);
+}
+
+/* header */
+.legal-header{
+margin-bottom:15px;
+}
+
+.legal-badge{
+display:inline-block;
+background:#22c55e;
+color:#fff;
+font-size:10px;
+font-weight:700;
+padding:4px 10px;
+border-radius:20px;
+margin-bottom:8px;
+}
+
+.legal-header h3{
+margin:0;
+font-size:18px;
+font-weight:700;
+}
+
+/* content */
+.legal-content p{
+font-size:13px;
+color:#cbd5f5;
+line-height:1.7;
+margin-bottom:10px;
+}
+
+/* footer */
+.legal-footer{
+display:flex;
+justify-content:space-between;
+margin-top:15px;
+font-size:11px;
+color:#64748b;
+border-top:1px solid rgba(255,255,255,.08);
+padding-top:10px;
+}
 </style>
 <!-- Schema -->
 <script type="application/ld+json">
@@ -272,7 +367,7 @@ margin-top:40px;
 <div class="ads-area">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753"
      crossorigin="anonymous"></script>
-<!-- Ads -->
+ Ads 
 <ins class="adsbygoogle"
      style="display:block"
      data-ad-client="ca-pub-6264483052991753"
@@ -312,28 +407,89 @@ margin-top:40px;
 <h2>Lihat Jadwal Pertandingan Lengkap</h2>
 <p>Dapatkan informasi kickoff terbaru dari berbagai kompetisi sepak bola internasional dan domestik secara informatif.</p>
 <br>
-<a href="https://server.beritanasional.eu.org/"
-   class="btn"
-  target="_blank" rel="nofollow noopener">
-   Go to Homepage Score808
-</a>
-     <br/>
-</div>
-<iframe title='live skor' id='score808frame2' loading='lazy' scrolling='no' src='https://official.tigoals.my.id/p/hasil-pertandingan-score808.html' style='width: 100%; border: none;'></iframe></div>
+  <div class="source-list">
 
+<div class="source-item">
+<span class="source-name">⚽ Score808 Match V1</span>
+<a href="#" data-url="https://server.beritanasional.eu.org/" class="safe-link small-btn">Open V1</a>
+</div>
+<div class="source-item">
+<span class="source-name">⚽ Score808 Match V2</span>
+<a href="#" data-url="https://tigoals.score808.eu.org/" class="safe-link small-btn">Open V2</a>
+</div>
+<div class="source-item">
+<span class="source-name">📊 Live Score Update</span>
+<a href="#" data-url="https://tigoals.candil.eu.org" class="safe-link small-btn">View</a>
+</div>
+
+<div class="source-item">
+<span class="source-name">🎥 Video Highlight</span>
+<a href="#" data-url="https://tigoals.candil.eu.org/p/highlights.html" class="safe-link small-btn">Watch</a>
+</div>
+
+<div class="source-item">
+<span class="source-name">💬 Komunitas Whatsapp</span>
+<a href="#" data-url="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="safe-link small-btn">Join Wa</a>
+</div>
+<div class="source-item">
+<span class="source-name">💬 Komunitas Telegram</span>
+<a href="#" data-url="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="safe-link small-btn">Join Tele</a>
+</div>
+</div>
+
+</div>
+<div class="legal-box">
+
+<div class="legal-header">
+<span class="legal-badge">INFO RESMI</span>
+<h3>Pusat Informasi Pertandingan</h3>
+</div>
+
+<div class="legal-content">
+
+<p>
+Halaman ini menyajikan informasi jadwal pertandingan sepak bola, live score, serta referensi konten dari berbagai sumber publik.
+</p>
+
+<p>
+Kami tidak meng-host, menyimpan, atau menyiarkan konten video dalam bentuk apa pun. Seluruh akses menuju halaman lain merupakan tautan eksternal yang dikelola oleh pihak ketiga.
+</p>
+
+<p>
+Untuk pengalaman terbaik dan kualitas tayangan resmi, pengguna disarankan mengakses platform penyiaran yang memiliki lisensi resmi.
+</p>
+
+</div>
+
+</div>
 <footer class="footer">
 © 2026 Portal Informasi Sepak Bola Score808 • Semua hak dilindungi
 </footer>
 
 </div>
+
   <script>
-window.addEventListener("message", function(e) {
-    if (e.origin !== "https://official.tigoals.my.id") return;
-    const iframe = document.getElementById("score808frame2");
-    if (e.data && e.data.height) {
-      iframe.style.height = e.data.height + "px";
-    }
-  });
-  </script>
+
+function encodeUrl(url){
+return btoa(unescape(encodeURIComponent(url)));
+}
+
+document.querySelectorAll(".safe-link").forEach(link=>{
+
+link.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const url=this.dataset.url;
+
+const encoded=encodeUrl(url);
+
+window.location.href="safe.html?url="+encoded;
+
+});
+
+});
+
+</script>
 </body>
 </html>
