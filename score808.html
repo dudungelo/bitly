@@ -524,7 +524,7 @@ cursor:pointer;
 <a href="#" data-url="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="safe-link small-btn">Join Tele</a>
 </div>
 </div>
-
+<iframe id='score808frame' loading='lazy' title='tigoals highlights' scrolling='no' src='https://official.tigoals.my.id/p/live-score.html' style='width: 100%; border: none;'></iframe>
 </div>
 <div class="legal-box">
 
@@ -576,45 +576,40 @@ Untuk pengalaman terbaik dan kualitas tayangan resmi, pengguna disarankan mengak
 © 2026 Portal Informasi Sepak Bola Score808 • Semua hak dilindungi
 </footer>
 
-
+<script>//<![CDATA[ 
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://official.tigoals.my.id") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+  //]]> </script>
   <script>
-
 function encodeUrl(url){
 return btoa(unescape(encodeURIComponent(url)));
 }
-
 document.querySelectorAll(".safe-link").forEach(link=>{
-
 link.addEventListener("click",function(e){
-
 e.preventDefault();
-
 const url=this.dataset.url;
-
 const encoded=encodeUrl(url);
-
 window.location.href="safe.html?url="+encoded;
-
 });
-
 });
-
 </script>
      <script>
 const sticky = document.getElementById("stickyCTA");
 const closeBtn = document.getElementById("closeSticky");
-
 /* TAMPIL SETELAH 3 DETIK (BIAR GA GANGGU LCP) */
 setTimeout(()=>{
   sticky.style.opacity = "1";
 },5000);
-
 /* CLOSE + SIMPAN */
 closeBtn.onclick = ()=>{
   sticky.style.display = "none";
   localStorage.setItem("hideCTA","1");
 };
-
 /* CEK LOCALSTORAGE */
 if(localStorage.getItem("hideCTA")){
   sticky.style.display = "none";
