@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Generate Link Aman...</title>
@@ -144,11 +143,63 @@ justify-content:center;
 z-index:9999;
 }
 
-.popup-box{
+
+  .popup-box{
 background:#020617;
-padding:20px;
-border-radius:12px;
+padding:22px;
+border-radius:14px;
 text-align:center;
+position:relative;
+width:90%;
+max-width:320px;
+animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:scale(.9);}
+to{opacity:1;transform:scale(1);}
+}
+
+.close-btn{
+position:absolute;
+top:8px;
+right:10px;
+background:none;
+border:none;
+color:#9ca3af;
+font-size:16px;
+cursor:pointer;
+}
+  .btn-tele, .btn-wa{
+display:block;
+margin-top:10px;
+padding:10px;
+border-radius:999px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+color:#fff;
+transition:.3s;
+}
+
+/* Telegram */
+.btn-tele{
+background:linear-gradient(135deg,#229ED9,#1c7ed6);
+}
+
+.btn-tele:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(34,158,217,.5);
+}
+
+/* WhatsApp */
+.btn-wa{
+background:linear-gradient(135deg,#25D366,#16a34a);
+}
+
+.btn-wa:hover{
+transform:scale(1.05);
+box-shadow:0 10px 25px rgba(37,211,102,.5);
 }
 </style>
   <script src="https://jsc.mgid.com/site/726924.js" async></script>
@@ -177,17 +228,26 @@ text-align:center;
 <a id="goBtn" class="btn btn-main" href="#">Tunggu...</a>
 
 </div>
-<div class="popup-join" id="popupJoin">
+
+  <div class="popup-join" id="popupJoin">
 <div class="popup-box">
 
-<h3>Join VIP 🔥</h3>
-<p>Dapatkan info live & link terbaru</p>
+<button class="close-btn" onclick="closePopup()">✕</button>
 
-<a href="https://t.me/score808alternative" target="_blank" class="btn-tele">Telegram</a>
-<a href="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" target="_blank" class="btn-wa">WhatsApp</a>
+<h3>🔥 Join VIP Sekarang</h3>
+<p>Dapatkan link tercepat & tanpa delay</p>
+
+<a href="https://t.me/score808alternative" target="_blank" class="btn-tele">
+🚀 Join Telegram VIP
+</a>
+
+<a href="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" target="_blank" class="btn-wa">
+💬 Join WhatsApp Channel
+</a>
 
 </div>
 </div>
+  
 <script>
 
 /* PARAM */
@@ -237,6 +297,9 @@ const timer = setInterval(()=>{
 setTimeout(()=>{
 document.getElementById("popupJoin").style.display="flex";
 },4000);
+  function closePopup(){
+document.getElementById("popupJoin").style.display="none";
+}
 </script>
 
 </body>
