@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generate Link Aman...</title>
+
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Harap tunggu sebentar untuk melanjutkan ke halaman tujuan.">
+
+<style>
+body{
+margin:0;
+font-family:system-ui;
+background:#0f172a;
+color:#e5e7eb;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.box{
+max-width:420px;
+width:100%;
+background:#020617;
+padding:20px;
+border-radius:16px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+h1{
+font-size:18px;
+margin-bottom:8px;
+}
+
+p{
+font-size:13px;
+color:#9ca3af;
+margin-bottom:16px;
+}
+
+.preview{
+background:#020617;
+border:1px solid #1e293b;
+padding:10px;
+border-radius:10px;
+font-size:12px;
+word-break:break-all;
+margin-bottom:14px;
+}
+
+/* progress */
+.progress{
+height:6px;
+background:#1e293b;
+border-radius:999px;
+overflow:hidden;
+margin-bottom:14px;
+}
+
+.bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#22c55e,#3b82f6);
+}
+
+/* button */
+.btn{
+display:block;
+margin-top:10px;
+padding:10px;
+border-radius:999px;
+text-decoration:none;
+font-size:13px;
+font-weight:600;
+}
+
+.btn-main{
+background:#3b82f6;
+color:#fff;
+opacity:.5;
+pointer-events:none;
+}
+
+/* ads */
+.ads{
+margin:12px 0;
+min-height:90px;
+background:#111827;
+border-radius:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:12px;
+color:#6b7280;
+}
+
+</style>
+  <script src="https://jsc.mgid.com/site/726924.js" async></script>
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>🔐 Generate Link Aman</h1>
+<p>Silakan tunggu, link sedang disiapkan...</p>
+
+<div class="preview" id="preview">Memuat link...</div>
+
+<!-- ADS SLOT -->
+<div class="ads">
+  <!-- GANTI DENGAN ADSENSE -->
+   <style> div[data-widget-id="1797437"] { min-height: 300px; } </style><div data-type="_mgwidget" data-widget-id="1797437"></div>
+<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+</div>
+
+<div class="progress">
+<div class="bar" id="bar"></div>
+</div>
+
+<a id="goBtn" class="btn btn-main" href="#">Tunggu...</a>
+
+</div>
+
+<script>
+
+/* PARAM */
+function getParam(n){
+  return new URL(location.href).searchParams.get(n);
+}
+
+/* DECODE */
+function decode(str){
+  try{
+    return decodeURIComponent(atob(str).split('').map(c =>
+      '%' + ('00'+c.charCodeAt(0).toString(16)).slice(-2)
+    ).join(''));
+  }catch(e){
+    return str;
+  }
+}
+
+const raw = getParam("url") || "";
+const target = decode(raw) || "https://www.google.com/search?q=tigoals+live+candil";
+
+document.getElementById("preview").innerText = target;
+
+/* PROGRESS */
+let duration = 6000;
+let start = Date.now();
+
+const bar = document.getElementById("bar");
+const btn = document.getElementById("goBtn");
+
+const timer = setInterval(()=>{
+
+  let percent = Math.min(((Date.now()-start)/duration)*100,100);
+  bar.style.width = percent+"%";
+
+  if(percent >= 100){
+    clearInterval(timer);
+
+    btn.innerText = "🚀 Lanjut ke Tujuan";
+    btn.href = target;
+    btn.style.opacity = "1";
+    btn.style.pointerEvents = "auto";
+  }
+
+},50);
+
+</script>
+
+</body>
+</html>
