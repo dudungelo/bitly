@@ -50,61 +50,132 @@
 </script>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+
 body{
-  margin:0;
   font-family:'Poppins',system-ui;
-  background:#020617;
+  background:linear-gradient(180deg,#020617,#020617 40%,#0f172a);
   color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
 }
 
-.container{
+/* CONTAINER */
+.wrap{
   max-width:520px;
-  width:100%;
+  margin:auto;
   padding:20px;
-  border-radius:18px;
-  background:#0f172a;
-  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+/* HEADER */
+.header{
   text-align:center;
+  margin-bottom:20px;
 }
 
 .logo{
-  font-size:22px;
+  font-size:24px;
   font-weight:700;
-  margin-bottom:10px;
+  letter-spacing:1px;
 }
 
-h1{
+.badge{
+  display:inline-block;
+  margin-top:8px;
+  padding:4px 10px;
+  border-radius:999px;
+  background:#22c55e20;
+  color:#22c55e;
+  font-size:11px;
+}
+
+/* HERO */
+.hero{
+  background:#0f172a;
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+  margin-bottom:18px;
+}
+
+.hero h1{
   font-size:20px;
   margin-bottom:10px;
 }
 
-p{
+.hero p{
   font-size:13px;
   color:#9ca3af;
   line-height:1.6;
 }
 
+/* CTA BUTTON */
 .btn{
   display:block;
-  margin-top:14px;
-  padding:12px;
+  width:100%;
+  padding:14px;
   border-radius:999px;
-  text-decoration:none;
+  text-align:center;
   font-weight:600;
+  text-decoration:none;
+  margin-top:12px;
+  transition:.2s;
 }
 
 .btn-main{
-  background:#3F51B5;
+  background:linear-gradient(135deg,#3F51B5,#6366f1);
   color:#fff;
+  box-shadow:0 10px 30px rgba(99,102,241,.4);
+}
+
+.btn-main:hover{
+  transform:scale(1.03);
 }
 
 .btn-alt{
   border:1px solid #334155;
   color:#e5e7eb;
+}
+
+/* TRUST */
+.trust{
+  margin-top:16px;
+  font-size:12px;
+  color:#9ca3af;
+  text-align:center;
+}
+
+/* JOIN */
+.join{
+  display:flex;
+  gap:10px;
+  margin-top:16px;
+}
+
+.join a{
+  flex:1;
+  padding:10px;
+  border-radius:999px;
+  text-align:center;
+  font-size:12px;
+  font-weight:600;
+  text-decoration:none;
+  color:#fff;
+}
+
+.tele{background:#229ED9;}
+.wa{background:#25D366;}
+
+/* FOOTER */
+.footer{
+  margin-top:20px;
+  text-align:center;
+  font-size:11px;
+  color:#6b7280;
+}
+
+/* MOBILE FIX */
+@media(max-width:480px){
+  .hero h1{font-size:18px}
 }
 </style>
 <script src="https://jsc.mgid.com/site/726924.js" async></script>
@@ -112,35 +183,53 @@ p{
 
 <body>
 
-<main class="container">
+<div class="wrap">
 
-<div class="logo">Score808pro</div>
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">Score808pro</div>
+  <div class="badge">● LIVE STREAM ACTIVE</div>
+</div>
 
-<h1>Link Resmi Live Streaming Bola Hari Ini</h1>
+<!-- HERO -->
+<div class="hero">
 
-<p>
-Akses terbaru live streaming pertandingan bola dunia hari ini dengan kualitas HD tanpa delay. 
-Tersedia berbagai liga populer seperti Liga 1 Indonesia, Premier League, Serie A, La Liga, Bundesliga dan Ligue 1.
-</p>
+  <h1>Live Streaming Bola Hari Ini Gratis ⚽</h1>
 
-<a href="https://www.google.com/search?q=tigoals+live+candil" class="btn btn-alt">
-🔍 Cari Link Alternatif
-</a>
+  <p>
+  Nonton pertandingan bola dunia hari ini tanpa delay dengan kualitas HD.
+  Semua liga tersedia dan bisa diakses langsung tanpa ribet.
+  </p>
 <div data-type="_mgwidget" data-widget-id="1797438"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
-<a href="https://t.me/score808alternative" class="btn btn-main">
-Gabung Telegram Update Link
-</a>
+  <!-- CTA UTAMA -->
+  <!--<a href="https://www.google.com/search?q=tigoals+live+candil" class="btn btn-main">
+  ▶️ TONTON SEKARANG
+  </a>-->
 
-<a href="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="btn btn-main">
-Gabung WhatsApp Channel
-</a>
+  <!-- CTA BACKUP -->
+  <a href="https://www.google.com/search?q=tigoals+live+candil" class="btn btn-alt">
+  🔍 LINK ALTERNATIF
+  </a>
 
-<p style="margin-top:15px;font-size:11px;color:#6b7280;">
-© Score808pro Official • Bookmark halaman ini untuk update terbaru
-</p>
+  <div class="trust">
+  ⚡ Akses cepat • Tanpa buffering • Update setiap hari
+  </div>
 
-</main>
+</div>
+
+<!-- JOIN -->
+<div class="join">
+  <a href="https://t.me/score808alternative" class="tele">Telegram</a>
+  <a href="https://www.whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="wa">WhatsApp</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+© 2026 Score808pro • All rights reserved
+</div>
+
+</div>
 
 </body>
 </html>
