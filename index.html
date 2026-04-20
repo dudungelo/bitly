@@ -5,242 +5,351 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Download Source Code Gratis | Premium Template</title>
+<title>Download Source Code Website Gratis | Candil Code</title>
 
-<meta name="description" content="Download kumpulan source code gratis template Blogger, safelink modern, jadwal bola API dan berbagai script premium siap pakai.">
+<meta name="description" content="Download source code aplikasi berbasis website gratis lengkap. Tersedia sistem informasi, template admin, landing page, dan berbagai project siap pakai untuk developer.">
+
+<meta name="keywords" content="source code gratis, source code website, download source code, template admin, aplikasi web gratis, sistem informasi, candil code">
 
 <meta name="robots" content="index, follow">
 
 <link rel="icon" href="https://cdn.jsdelivr.net/gh/score808pages/football808@main/image/livescore%20808.png">
+
+<!-- OPEN GRAPH (SHARE SOSIAL) -->
+<meta property="og:title" content="Download Source Code Website Gratis | Candil Code">
+<meta property="og:description" content="Kumpulan source code aplikasi web gratis siap pakai untuk developer dan pembelajaran.">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/score808pages/football808@main/image/livescore%20808.png">
+<meta property="og:type" content="website">
+
+<!-- TWITTER CARD -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Download Source Code Website Gratis">
+<meta name="twitter:description" content="Kumpulan source code aplikasi web gratis siap pakai.">
+<meta name="author" content="Candil Code">
+<link rel="canonical" href="https://bitly.candil.eu.org/">
 <meta name="yandex-verification" content="4ff15cfc41bf5c68" />
+
 
 <style>
 
-/* BODY */
-
-body{
+/* RESET */
+*{
 margin:0;
-background:#f5f7fb;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BODY */
+body{
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
+font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;
 color:#111;
 }
 
 
 /* HEADER */
-
 .header{
-
-padding:20px;
 text-align:center;
-font-size:22px;
-font-weight:700;
-
+padding:25px;
+font-size:24px;
+font-weight:800;
+letter-spacing:.3px;
 }
 
 
 /* CONTAINER */
-
 .bitly-pro{
-
 max-width:520px;
-margin:40px auto;
-background:#fff;
-border-radius:18px;
-box-shadow:0 15px 50px rgba(0,0,0,.08);
-padding:30px;
-text-align:center;
+margin:30px auto;
+padding:28px;
+border-radius:22px;
 
+background:rgba(255,255,255,0.75);
+backdrop-filter:blur(12px);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08),
+inset 0 1px 0 rgba(255,255,255,.6);
+
+text-align:center;
 }
 
 
 /* ICON */
-
 .thumb{
-
-width:90px;
-height:90px;
-border-radius:22px;
+width:95px;
+height:95px;
+border-radius:24px;
 margin-bottom:15px;
-
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
 
 /* TITLE */
-
 .title{
-
-font-size:20px;
-font-weight:600;
-margin-bottom:8px;
-
+font-size:22px;
+font-weight:700;
+margin-bottom:6px;
 }
 
 
 /* DESC */
-
 .desc{
-
 font-size:14px;
-color:#6b7280;
-margin-bottom:15px;
-
+color:#64748b;
+margin-bottom:12px;
 }
 
 
-/* LINK */
-
+/* SHORTLINK */
 .shortlink{
-
 font-size:13px;
 color:#2563eb;
-word-break:break-all;
-margin-bottom:20px;
-
+margin-bottom:18px;
 }
 
 
-/* COUNTDOWN */
-
+/* COUNT BOX */
 .count-box{
-
-background:#f1f5ff;
-padding:14px;
-border-radius:12px;
-margin-bottom:20px;
+background:#eef2ff;
+padding:16px;
+border-radius:14px;
+margin-bottom:15px;
 font-size:14px;
-
 }
 
+
+/* TIMER */
 #timer{
-
-font-weight:700;
-font-size:18px;
+font-size:20px;
+font-weight:800;
 color:#2563eb;
+}
 
+
+/* PROGRESS BAR */
+.progress{
+height:6px;
+background:#e2e8f0;
+border-radius:20px;
+overflow:hidden;
+margin-top:10px;
+}
+
+.progress-bar{
+height:100%;
+width:0%;
+background:linear-gradient(90deg,#2563eb,#60a5fa);
+transition:width 1s linear;
 }
 
 
 /* BUTTON */
-
 .download-btn{
-
 display:block;
-background:#cbd5e1;
-color:#fff;
-padding:15px;
-border-radius:12px;
-text-decoration:none;
+padding:16px;
+border-radius:14px;
 font-size:16px;
 font-weight:600;
+text-decoration:none;
+
+background:#cbd5e1;
+color:#fff;
+
 pointer-events:none;
 transition:.3s;
-
 }
 
 
-/* ACTIVE BUTTON */
-
+/* ACTIVE */
 .download-btn.active{
-
-background:#2563eb;
+background:linear-gradient(135deg,#2563eb,#1d4ed8);
 pointer-events:auto;
-
+transform:translateY(0);
+box-shadow:0 10px 25px rgba(37,99,235,.4);
 }
 
 .download-btn.active:hover{
+transform:translateY(-2px);
+}
+.google-btn{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
 
-background:#1d4ed8;
+padding:14px;
+border-radius:12px;
 
+background:#fff;
+border:1px solid #e5e7eb;
+
+font-size:15px;
+font-weight:600;
+color:#111;
+
+text-decoration:none;
+
+pointer-events:none;
+opacity:.6;
+transition:.25s;
 }
 
+/* ICON */
+.google-btn svg{
+width:20px;
+height:20px;
+}
 
-/* LIST SOURCE */
+/* ACTIVE */
+.google-btn.active{
+pointer-events:auto;
+opacity:1;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
 
+.google-btn.active:hover{
+background:#f9fafb;
+transform:translateY(-2px);
+}
+
+/* LIST */
 .source-list{
-
 margin-top:25px;
-text-align:left;
-
 }
 
 .source-item{
-
-background:#f8fafc;
+background:#f1f5f9;
 padding:12px;
-border-radius:10px;
+border-radius:12px;
 margin-bottom:10px;
+
 display:flex;
 justify-content:space-between;
 align-items:center;
+transition:.2s;
+}
 
+.source-item:hover{
+background:#e2e8f0;
 }
 
 
-.source-name{
-
-font-size:14px;
-font-weight:500;
-
-}
-
-
+/* SMALL BTN */
 .small-btn{
-
 background:#2563eb;
 color:#fff;
 padding:6px 12px;
 border-radius:8px;
 font-size:12px;
 text-decoration:none;
-
+transition:.2s;
 }
 
 .small-btn:hover{
-
 background:#1d4ed8;
-
 }
 
 
 /* INFO */
-
 .info{
-
 margin-top:15px;
 font-size:13px;
-color:#6b7280;
-
+color:#64748b;
 }
 
 
-/* SEO ARTICLE */
-
+/* SEO */
 .seo{
+max-width:760px;
+margin:50px auto;
+padding:30px;
 
-max-width:750px;
-margin:40px auto;
-padding:20px;
-line-height:1.7;
+background:#fff;
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+
+line-height:1.8;
 color:#374151;
+font-size:15px;
+}
 
+
+/* HEADING */
+.seo h2{
+font-size:24px;
+font-weight:800;
+margin-bottom:15px;
+color:#111;
 }
 
 .seo h3{
-
-font-size:20px;
-margin-bottom:10px;
-color:#111;
-
+font-size:18px;
+font-weight:700;
+margin:25px 0 10px;
+color:#1f2937;
 }
 
-</style>
 
+/* PARAGRAPH */
+.seo p{
+margin-bottom:12px;
+}
+
+
+/* LIST STYLE */
+.seo p::before{
+content:"";
+}
+
+
+/* HIGHLIGHT */
+.seo b{
+color:#111;
+font-weight:700;
+}
+
+
+/* DIVIDER */
+.seo h3::before{
+content:"";
+display:block;
+width:40px;
+height:3px;
+background:#2563eb;
+margin-bottom:6px;
+border-radius:10px;
+}
+
+
+/* MOBILE */
+@media(max-width:600px){
+
+.seo{
+padding:20px;
+margin:30px 15px;
+font-size:14px;
+}
+
+.seo h2{
+font-size:20px;
+}
+
+}
+.seo ul{
+padding-left:18px;
+margin:10px 0;
+}
+
+.seo li{
+margin-bottom:6px;
+}
+</style>
 
 </head>
 
-
 <body>
-
 
 <div class="header">
 
@@ -266,41 +375,38 @@ src="https://avatars.githubusercontent.com/u/137203567?v=4">
 
 
 <div class="title">
-
-Kumpulan Source Code Gratis
-
+Kumpulan Source Code Website Gratis & Siap Pakai
 </div>
-
 
 <div class="desc">
-
-Template Blogger Safelink dan Script Premium
-
+Platform berbagi source code aplikasi berbasis web gratis, mulai dari sistem informasi, template admin, hingga project modern untuk developer dan pembelajaran.
 </div>
-
 
 <div class="shortlink">
-
 bitly.candil.eu.org
-
 </div>
-
-
-
 <div class="count-box">
 
-Link download akan aktif dalam  
+Akses Link akan aktif dalam  
 <b><span id="timer">10</span></b> detik
-
+<div class="progress">
+  <div class="progress-bar" id="progressBar"></div>
 </div>
-
-
+</div>
 
 <a id="downloadBtn"
 href="https://www.google.com/search?q=Candil+Code&utm_source=Kumpulan+Source+Code+Aplikasi+Gratis"
-class="download-btn">
+class="google-btn">
 
-⬇️ Lanjutkan Ke Tujuan
+<!-- ICON GOOGLE SVG -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+<path fill="#EA4335" d="M24 9.5c3.1 0 5.9 1.1 8.1 3l6-6C34.2 2.9 29.4 1 24 1 14.7 1 6.7 6.6 2.7 14.7l7 5.4C11.5 14 17.2 9.5 24 9.5z"/>
+<path fill="#4285F4" d="M46.1 24.5c0-1.6-.1-3.1-.4-4.5H24v9h12.4c-.5 2.6-2 4.9-4.2 6.4l6.5 5c3.8-3.5 6.4-8.7 6.4-15.9z"/>
+<path fill="#FBBC05" d="M9.7 28.1c-1-2.6-1-5.5 0-8.1l-7-5.4C.9 18 0 21 0 24s.9 6 2.7 9.4l7-5.3z"/>
+<path fill="#34A853" d="M24 47c5.4 0 10-1.8 13.3-4.9l-6.5-5c-1.8 1.2-4.1 1.9-6.8 1.9-6.8 0-12.5-4.5-14.3-10.6l-7 5.3C6.7 41.4 14.7 47 24 47z"/>
+</svg>
+
+<span>Lanjutkan via Google</span>
 
 </a>
 
@@ -370,8 +476,6 @@ Watch
 
 </div>
 
-
-
 </div>
 
 </div>
@@ -382,37 +486,58 @@ Watch
 
 <div class="seo">
 
-<h3>Kumpulan Template dan Script Gratis</h3>
+<h2>Cara Akses Candil Code Lewat Google</h2>
 
-<p>Halaman ini menyediakan berbagai kumpulan source code gratis yang dapat digunakan untuk kebutuhan website maupun proyek pengembangan aplikasi. Template yang tersedia meliputi safelink modern, halaman download premium, template Blogger, hingga script otomatis.</p>
+<p>Untuk mendapatkan kumpulan <b>source code gratis</b>, template Blogger, dan berbagai script premium, Anda bisa mengakses Candil Code dengan mudah melalui mesin pencari seperti Google. Cara ini merupakan metode paling aman dan direkomendasikan untuk menemukan link terbaru.</p>
 
-<p>Semua source code dapat digunakan secara gratis untuk pembelajaran maupun pengembangan website sehingga memudahkan proses pembuatan situs menjadi lebih cepat dan efisien.</p>
+<h3>Langkah-Langkah Akses Candil Code</h3>
 
-<p>Silakan download template yang tersedia dan gunakan sesuai kebutuhan proyek Anda.</p>
+<p>1. Buka Google melalui browser di HP atau komputer Anda.</p>
+
+<p>2. Ketik kata kunci <b>Candil Code</b> atau <b>download source code gratis Candil Code</b> pada kolom pencarian.</p>
+
+<p>3. Pilih website resmi Candil Code yang muncul di halaman pertama hasil pencarian.</p>
+
+<p>4. Masuk ke halaman yang berisi kumpulan template Blogger, safelink modern, dan berbagai script siap pakai.</p>
+
+<h3>Kenapa Harus Lewat Google?</h3>
+
+<p>Mengakses melalui Google membantu Anda mendapatkan link yang selalu update, menghindari halaman error, serta memastikan keamanan saat mengunduh file. Selain itu, metode ini juga memudahkan Anda menemukan berbagai versi terbaru dari template atau script yang tersedia.</p>
+
+<h3>Kelebihan Menggunakan Candil Code</h3>
+
+<ul>
+<li>Menyediakan berbagai <b>source code gratis</b></li>
+<li>Cocok untuk pemula maupun developer</li>
+<li>Sc otomatis siap pakai</li>
+<li>Update konten secara berkala</li>
+</ul>
+<p>Dengan mengikuti panduan ini, Anda dapat dengan mudah menemukan dan mengunduh berbagai kebutuhan website secara cepat, aman, dan efisien melalui Candil Code.</p>
 
 </div>
 <script>
 
-/* COUNTDOWN */
-
-var timeLeft = 15;
+var timeLeft = 10;
+var totalTime = 10;
 
 var timer = document.getElementById("timer");
 var btn = document.getElementById("downloadBtn");
+var progress = document.getElementById("progressBar");
 
 var countdown = setInterval(function(){
 
   timeLeft--;
   timer.innerHTML = timeLeft;
 
+  let percent = ((totalTime - timeLeft) / totalTime) * 100;
+  progress.style.width = percent + "%";
+
   if(timeLeft <= 0){
 
     clearInterval(countdown);
-    timer.innerHTML = "0";
+    timer.innerHTML = "Ready";
 
-    // Aktifkan tombol saja
     btn.classList.add("active");
-    btn.removeAttribute("disabled");
 
   }
 
