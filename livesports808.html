@@ -194,6 +194,82 @@ padding:15px;
 }
 }
 </style>
+  <style>
+.btn-wrap{
+  display:grid;
+  gap:14px;
+  margin:18px 0;
+}
+
+.btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:15px 18px;
+  border-radius:18px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:700;
+  font-size:15px;
+  transition:.25s ease;
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+}
+
+.btn-icon{
+  width:22px;
+  height:22px;
+  flex:none;
+}
+
+/* tombol utama */
+.btn-main{
+  background:linear-gradient(135deg,#ef4444,#dc2626);
+}
+
+/* tombol live tv */
+.btn-tv{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+}
+
+/* tombol hasil */
+.btn-alt{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+/* live pulse */
+.live-pulse{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#fff;
+  box-shadow:0 0 0 rgba(255,255,255,.7);
+  animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+  0%{transform:scale(.9);box-shadow:0 0 0 0 rgba(255,255,255,.7)}
+  70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
+  100%{transform:scale(.9);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+
+@media(max-width:768px){
+  .btn{
+    font-size:14px;
+    padding:14px 16px;
+    border-radius:16px;
+  }
+
+  .btn-icon{
+    width:20px;
+    height:20px;
+  }
+}
+</style>
   <script src="https://jsc.mgid.com/site/726924.js" async></script>
 </head>
 
@@ -221,14 +297,35 @@ Nikmati akses pertandingan live dengan tampilan modern, cepat, nyaman di mobile,
 <div data-type="_mgwidget" data-widget-id="1797438"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
   
+<div class="btn-wrap">
+
 <a href="https://tigoals.candil.eu.org" class="btn btn-main">
-<span class="live-dot"></span>
-Lihat Live Sekarang
+  <span class="live-pulse"></span>
+
+  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M21 6H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h6v2h6v-2h6a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 10H3V8h18v8zm-8-1 5-3-5-3v6z"/>
+  </svg>
+
+  <span>Lihat Live Sekarang</span>
 </a>
 
-<a href="https://tigoals.candil.eu.org" class="btn btn-alt">
-Lihat Jadwal Hari Ini
+<a href="https://tigoals.candil.eu.org/p/live-tv.html" class="btn btn-tv">
+  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M21 7H3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6l-2 3h10l-2-3h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm0 9H3V9h18v7zm-7-6v5l4-2.5L14 10z"/>
+  </svg>
+
+  <span>Live TV</span>
 </a>
+
+<a href="https://tigoals.candil.eu.org/p/hasil-pertandingan.html" class="btn btn-alt">
+  <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8 14H7v-2h4v2zm6-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+  </svg>
+
+  <span>Lihat Hasil Pertandingan</span>
+</a>
+
+</div>
 <iframe id='score808frame' loading="lazy" fetchpriority="low" importance="low" title='tigoals livescore' scrolling='no' src='https://cdn.candil.eu.org/p/matchday.html' style='width: 100%; border: none;'></iframe>
 <br/>
 <div class="footer">
