@@ -229,13 +229,22 @@ Lihat Live Sekarang
 <a href="https://tigoals.candil.eu.org" class="btn btn-alt">
 Lihat Jadwal Hari Ini
 </a>
-
+<iframe id='score808frame' loading="lazy" fetchpriority="low" importance="low" title='tigoals livescore' scrolling='no' src='https://cdn.candil.eu.org/p/matchday.html' style='width: 100%; border: none;'></iframe>
+<br/>
 <div class="footer">
 © 2026 Live Sports Access Page<br>
 Responsive • Fast Loading • Clean UI
 </div>
 
 </div>
-
+<b:if cond='data:view.isHomepage'>	<script>//<![CDATA[ 
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://cdn.candil.eu.org") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+  //]]> </script>
 </body>
 </html>
