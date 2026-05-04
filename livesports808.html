@@ -162,79 +162,155 @@ padding:15px;
 }
 }
 </style>
-  <style>
-.btn-wrap{
-  display:grid;
-  gap:14px;
-  margin:18px 0;
+   
+<style>
+:root{
+  --bg1:#0f172a;
+  --bg2:#1e293b;
+  --primary:#00c6ff;
+  --secondary:#0072ff;
 }
 
+/* WRAPPER */
+.btn-wrap{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:16px;
+  margin:25px 0;
+}
+
+/* BUTTON BASE */
 .btn{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:12px;
-  padding:15px 18px;
-  border-radius:18px;
-  text-decoration:none;
+  gap:10px;
+  padding:15px;
+  border-radius:16px;
   color:#fff;
-  font-weight:700;
-  font-size:15px;
-  transition:.25s ease;
-  box-shadow:0 10px 24px rgba(0,0,0,.18);
+  font-weight:600;
+  font-size:14px;
+  text-decoration:none;
+  overflow:hidden;
+  isolation:isolate;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,.4);
+  transition:.3s ease;
 }
 
-.btn:hover{
-  transform:translateY(-3px);
-}
-
+/* ICON */
 .btn-icon{
-  width:22px;
-  height:22px;
-  flex:none;
+  width:18px;
+  height:18px;
 }
 
-/* tombol utama */
-.btn-main{
-  background:linear-gradient(135deg,#ef4444,#dc2626);
+/* GLOW BORDER */
+.btn::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding:1px;
+  border-radius:16px;
+  background:linear-gradient(120deg,#00c6ff,#0072ff,#00ffcc);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor;
+          mask-composite:exclude;
+  opacity:.6;
 }
 
-/* tombol live tv */
-.btn-tv{
-  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+/* HOVER 3D */
+.btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 15px 40px rgba(0,0,0,.6);
 }
 
-/* tombol hasil */
-.btn-alt{
-  background:linear-gradient(135deg,#0f172a,#1e293b);
-}
-
-/* live pulse */
-.live-pulse{
-  width:10px;
-  height:10px;
+/* RIPPLE EFFECT */
+.btn span.ripple{
+  position:absolute;
   border-radius:50%;
-  background:#fff;
-  box-shadow:0 0 0 rgba(255,255,255,.7);
-  animation:pulse 1.5s infinite;
+  transform:scale(0);
+  animation:ripple .6s linear;
+  background:rgba(255,255,255,.4);
+  pointer-events:none;
 }
 
-@keyframes pulse{
-  0%{transform:scale(.9);box-shadow:0 0 0 0 rgba(255,255,255,.7)}
-  70%{transform:scale(1);box-shadow:0 0 0 10px rgba(255,255,255,0)}
-  100%{transform:scale(.9);box-shadow:0 0 0 0 rgba(255,255,255,0)}
+@keyframes ripple{
+  to{
+    transform:scale(4);
+    opacity:0;
+  }
 }
 
-@media(max-width:768px){
-  .btn{
-    font-size:14px;
-    padding:14px 16px;
-    border-radius:16px;
+/* MAIN */
+.btn-main{
+  background:linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+/* TV */
+.btn-tv{
+  background:linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+/* ALT */
+.btn-alt{
+  background:linear-gradient(135deg,#11998e,#38ef7d);
+}
+
+/* LIVE DOT */
+.live-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#00ff88;
+  box-shadow:0 0 10px #00ff88;
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+  50%{opacity:.3}
+}
+
+/* SHINE */
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.2),transparent);
+  transform:translateX(-100%);
+}
+
+.btn:hover::after{
+  transform:translateX(100%);
+  transition:.6s;
+}
+
+/* MOBILE STICKY */
+.sticky-cta{
+  display:none;
+}
+
+@media(max-width:600px){
+  .btn-wrap{
+    grid-template-columns:1fr;
   }
 
-  .btn-icon{
-    width:20px;
-    height:20px;
+  .sticky-cta{
+    display:flex;
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    z-index:9999;
+  }
+
+  .sticky-cta a{
+    width:100%;
+    justify-content:center;
+    border-radius:14px;
   }
 }
 </style>
@@ -264,36 +340,40 @@ Nikmati akses pertandingan live dengan tampilan modern, cepat, nyaman di mobile,
 </div>
 <div data-type="_mgwidget" data-widget-id="1797438"></div>
 <script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
-  
+
 <div class="btn-wrap">
 
-<a href="https://tigoals.candil.eu.org" class="btn btn-main">
-  <span class="live-pulse"></span>
-
+<a href="https://tigoals.candil.eu.org" class="btn btn-main ripple-btn">
+  <span class="live-dot"></span>
   <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M21 6H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h6v2h6v-2h6a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm0 10H3V8h18v8zm-8-1 5-3-5-3v6z"/>
+    <path d="M21 6H3a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h6v2h6v-2h6a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2zm-8 9 5-3-5-3v6z"/>
   </svg>
-
   <span>Lihat Live Sekarang</span>
 </a>
 
-<a href="https://bitly.candil.eu.org/tv" class="btn btn-tv">
+<a href="https://bitly.candil.eu.org/tv" class="btn btn-tv ripple-btn">
   <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M21 7H3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6l-2 3h10l-2-3h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zm0 9H3V9h18v7zm-7-6v5l4-2.5L14 10z"/>
+    <path d="M21 7H3a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h6l-2 3h10l-2-3h6a2 2 0 0 0 2-2V9z"/>
   </svg>
-
   <span>Live on TV</span>
 </a>
 
-<a href="https://tigoals.candil.eu.org/p/hasil-pertandingan.html" class="btn btn-alt">
+<a href="https://tigoals.candil.eu.org/p/hasil-pertandingan.html" class="btn btn-alt ripple-btn">
   <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-8 14H7v-2h4v2zm6-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+    <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14V5z"/>
   </svg>
-
   <span>Lihat Hasil Pertandingan</span>
 </a>
 
 </div>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <a href="https://tigoals.candil.eu.org" class="btn btn-main ripple-btn">
+    🔴 Live Sekarang
+  </a>
+</div>
+
 <iframe id='score808frame' loading="lazy" fetchpriority="low" importance="low" title='tigoals livescore' scrolling='no' src='https://cdn.candil.eu.org/p/matchday.html' style='width: 100%; border: none;'></iframe>
 <br/>
 <div class="footer">
@@ -311,5 +391,22 @@ window.addEventListener("message", function(e) {
     }
   });
   //]]> </script>
+  <script>
+// RIPPLE EFFECT
+document.querySelectorAll(".ripple-btn").forEach(btn=>{
+  btn.addEventListener("click",function(e){
+    const ripple=document.createElement("span");
+    ripple.classList.add("ripple");
+
+    const rect=this.getBoundingClientRect();
+    ripple.style.left=e.clientX-rect.left+"px";
+    ripple.style.top=e.clientY-rect.top+"px";
+
+    this.appendChild(ripple);
+
+    setTimeout(()=>ripple.remove(),600);
+  });
+});
+</script>
 </body>
 </html>
