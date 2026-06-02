@@ -317,21 +317,11 @@ Cari Jadwal di Google
 Lihat Live Score Terbaru
 </div>-->
 <a href="https://bitly.candil.eu.org/sports"
-target="_blank"
 class="btn btn-news">
 <svg fill="currentColor" viewBox="0 0 24 24">
 <path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/>
 </svg>
 Baca Berita Bola
-</a>
- <a href="https://tigoals.candil.eu.org/"
-class="btn btn-result">
-
-<svg fill="currentColor" viewBox="0 0 24 24">
-<path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14V5zm-8 14H7v-2h4v2zm6-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-</svg>
-
-Lihat Hasil Pertandingan
 </a>
 <!-- JOIN -->
 <div class="join">
@@ -353,6 +343,8 @@ WhatsApp
 </div>
 
 </div>
+<iframe id='score808frame' loading='lazy' title='tigoals highlights' scrolling='no' src='https://cdn.candil.eu.org/p/hasil-pertandingan.html' style='width: 100%; border: none;'></iframe>
+
 <div class="seo">
 
 <h2>Jadwal Bola Hari Ini Lengkap</h2>
@@ -395,6 +387,14 @@ function goSearch(){
 window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(q);}
 
 </script>-->
-
+<script>//<![CDATA[ 
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://cdn.candil.eu.org") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+  //]]> </script>
 </body>
 </html>
