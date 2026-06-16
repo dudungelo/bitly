@@ -346,7 +346,113 @@ margin:10px 0;
 margin-bottom:6px;
 }
 </style>
+<style>
+.wa-float{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:9999;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  background:#25D366;
+  color:#fff;
+  padding:12px 18px;
+  border-radius:50px;
+  box-shadow:0 10px 30px rgba(37,211,102,.35);
+  transition:.3s ease;
+  animation:waBounce 2s infinite;
+  font-family:Inter,Arial,sans-serif;
+}
 
+.wa-float:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(37,211,102,.45);
+}
+
+.wa-icon{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.wa-icon svg{
+  width:28px;
+  height:28px;
+}
+
+.wa-content{
+  display:flex;
+  flex-direction:column;
+  line-height:1.2;
+}
+
+.wa-label{
+  font-size:12px;
+  opacity:.9;
+}
+
+.wa-content strong{
+  font-size:15px;
+  font-weight:700;
+}
+
+@keyframes waBounce{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-5px);
+  }
+}
+
+@media(max-width:768px){
+
+  .wa-float{
+    right:15px;
+    bottom:15px;
+    padding:10px 14px;
+  }
+
+  .wa-icon{
+    width:46px;
+    height:46px;
+  }
+
+  .wa-content strong{
+    font-size:14px;
+  }
+
+  .wa-label{
+    font-size:11px;
+  }
+}
+
+@media(max-width:480px){
+
+  .wa-content{
+    display:none;
+  }
+
+  .wa-float{
+    width:60px;
+    height:60px;
+    padding:0;
+    justify-content:center;
+    border-radius:50%;
+  }
+
+  .wa-icon{
+    background:none;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -423,7 +529,7 @@ Tunggu beberapa detik sebelum dimulai
 <div class="source-item">
 
 <span class="source-name">
-Demo Video Youtube
+Video Tutorial Youtube
 </span>
 
 <a href="https://www.youtube.com/@CandilRiyadi"
@@ -463,11 +569,11 @@ Join
 
 <span class="source-name">
 
-Live Streaming Page
+Livescore Football
 
 </span>
 
-<a href="https://bitly.candil.eu.org/score808"
+<a href="https://tigoals.candil.eu.org"
 class="small-btn">
 
 Watch
@@ -481,7 +587,25 @@ Watch
 </div>
 
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6283815432987?text=Halo%20saya%20tertarik%20dengan%20jasa%20pembuatan%20website"
+   class="wa-float"
+   target="_blank"
+   rel="noopener noreferrer">
 
+  <div class="wa-icon">
+    <svg viewBox="0 0 32 32" fill="currentColor">
+      <path d="M19.11 17.22c-.29-.15-1.7-.84-1.96-.93-.26-.1-.45-.15-.64.15-.19.29-.74.93-.91 1.12-.17.19-.33.22-.62.08-.29-.15-1.21-.45-2.3-1.43-.85-.76-1.42-1.7-1.58-1.99-.17-.29-.02-.44.12-.59.13-.13.29-.33.44-.49.15-.17.19-.29.29-.49.1-.19.05-.37-.02-.52-.08-.15-.64-1.54-.88-2.11-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.49.08-.74.37-.26.29-.98.96-.98 2.35s1 2.74 1.14 2.93c.15.19 1.97 3 4.78 4.08.67.29 1.19.46 1.6.59.67.21 1.27.18 1.75.11.53-.08 1.7-.69 1.94-1.35.24-.66.24-1.22.17-1.34-.07-.12-.26-.19-.55-.34z"/>
+      <path d="M16.03 3C8.84 3 3 8.73 3 15.81c0 2.48.72 4.9 2.09 6.98L3 29l6.44-2.04a13.1 13.1 0 006.59 1.78c7.19 0 13.03-5.73 13.03-12.81S23.22 3 16.03 3zm0 23.37c-2.02 0-4-.54-5.73-1.57l-.41-.24-3.82 1.21 1.25-3.72-.27-.39a10.96 10.96 0 01-1.8-5.85c0-5.99 4.84-10.86 10.79-10.86 5.95 0 10.79 4.87 10.79 10.86 0 5.98-4.84 10.86-10.79 10.86z"/>
+    </svg>
+  </div>
+
+  <div class="wa-content">
+    <span class="wa-label">Konsultasi Gratis</span>
+    <strong>Chat WhatsApp</strong>
+  </div>
+
+</a>
 <!-- SEO ARTICLE -->
 
 <div class="seo">
