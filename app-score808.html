@@ -345,158 +345,664 @@ height:58px;
 }
 
 }
+
+</style>
+<style>
+/* =================================
+   STICKY CONTAINER
+================================= */
+
 .viral-sticky{
-position:fixed;
-left:16px;
-right:16px;
-bottom:18px;
-z-index:9999;
-display:flex;
-justify-content:center;
-pointer-events:none;
+  position:fixed;
+  left:16px;
+  right:16px;
+  bottom:18px;
+  z-index:9998;
+  display:flex;
+  justify-content:center;
+  pointer-events:none;
 }
+
+
+/* =================================
+   STICKY BUTTON
+================================= */
 
 .viral-btn{
-pointer-events:auto;
-position:relative;
-display:flex;
-align-items:center;
-gap:14px;
-width:min(520px,100%);
-padding:16px 18px;
-border-radius:22px;
-text-decoration:none;
-color:#fff;
-background:rgba(20,20,20,.9);
-backdrop-filter:blur(18px);
--webkit-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,.08);
-box-shadow:
-0 12px 40px rgba(0,0,0,.35);
-transition:.25s;
-overflow:visible;
+  pointer-events:auto;
+  position:relative;
+
+  display:flex;
+  align-items:center;
+  gap:14px;
+
+  width:min(520px,100%);
+  padding:16px 18px;
+
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:22px;
+
+  color:#fff;
+  background:rgba(20,20,20,.92);
+
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 12px 40px rgba(0,0,0,.35),
+    0 0 0 1px rgba(255,255,255,.02);
+
+  cursor:pointer;
+  text-align:left;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+  
+  overflow:visible;
 }
+
+
+/* SHINE */
 
 .viral-btn::before{
-content:"";
-position:absolute;
-inset:0;
-background:linear-gradient(90deg,
-transparent,
-rgba(255,255,255,.15),
-transparent);
-transform:translateX(-120%);
-animation:shine 3.5s infinite;
+  content:"";
+  position:absolute;
+  inset:0;
+
+  border-radius:22px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.15),
+      transparent
+    );
+
+  transform:translateX(-120%);
+  animation:viralShine 3.5s infinite;
+
+  pointer-events:none;
 }
 
-@keyframes shine{
-100%{
-transform:translateX(140%);
+@keyframes viralShine{
+  100%{
+    transform:translateX(140%);
+  }
 }
-}
+
+
+/* HOVER */
 
 .viral-btn:hover{
-transform:translateY(-4px);
-box-shadow:0 18px 50px rgba(0,0,0,.45);
+  transform:translateY(-4px);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.45),
+    0 0 30px rgba(255,59,48,.08);
 }
+
+
+/* =================================
+   HOT BADGE
+================================= */
 
 .viral-badge{
-position:absolute;
-top:-18px;
-right:18px;
-background:#ff3b30;
-color:#fff;
-font-size:11px;
-font-weight:700;
-padding:5px 10px;
-border-radius:999px;
-letter-spacing:.5px;
-box-shadow:0 0 16px rgba(255,59,48,.5);
+  position:absolute;
+
+  top:-17px;
+  right:18px;
+
+  padding:5px 10px;
+
+  border-radius:999px;
+
+  background:#ff3b30;
+  color:#fff;
+
+  font-size:11px;
+  font-weight:800;
+
+  letter-spacing:.5px;
+
+  box-shadow:
+    0 0 16px rgba(255,59,48,.5);
+
+  animation:badgePulse 1.8s infinite;
 }
 
+@keyframes badgePulse{
+  0%,100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.06);
+  }
+}
+
+
+/* =================================
+   ICON
+================================= */
+
 .viral-icon{
-width:52px;
-height:52px;
-border-radius:16px;
-background:linear-gradient(135deg,#ff4d4d,#ff8a00);
-display:flex;
-align-items:center;
-justify-content:center;
-flex-shrink:0;
+  width:52px;
+  height:52px;
+
+  border-radius:16px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3b30,
+      #ff9500
+    );
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+
+  box-shadow:
+    0 8px 25px rgba(255,59,48,.25);
 }
 
 .viral-icon svg{
-width:28px;
-height:28px;
+  width:28px;
+  height:28px;
 }
 
+
+/* =================================
+   CONTENT
+================================= */
+
 .viral-content{
-flex:1;
-display:flex;
-flex-direction:column;
+  flex:1;
+
+  display:flex;
+  flex-direction:column;
+
+  min-width:0;
 }
 
 .viral-content strong{
-font-size:17px;
-font-weight:700;
+  font-size:17px;
+  font-weight:750;
+  line-height:1.2;
 }
 
 .viral-content span{
-margin-top:3px;
-font-size:13px;
-color:#d4d4d4;
+  margin-top:4px;
+
+  font-size:13px;
+  color:#d4d4d4;
+
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
+
+/* =================================
+   ARROW
+================================= */
+
 .viral-arrow{
-width:40px;
-height:40px;
-border-radius:50%;
-background:rgba(255,255,255,.08);
-display:flex;
-align-items:center;
-justify-content:center;
-transition:.25s;
+  width:40px;
+  height:40px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.08);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+
+  transition:.25s;
 }
 
 .viral-arrow svg{
-width:22px;
-height:22px;
+  width:22px;
+  height:22px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
 }
 
 .viral-btn:hover .viral-arrow{
-transform:translateX(4px);
-background:#25D366;
+  transform:translateX(4px);
+  background:#25D366;
 }
+
+
+/* =================================
+   POPUP
+================================= */
+
+.viral-popup{
+  position:fixed;
+  inset:0;
+
+  z-index:10000;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:20px;
+
+  visibility:hidden;
+  opacity:0;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.viral-popup.active{
+  visibility:visible;
+  opacity:1;
+}
+
+
+/* =================================
+   BACKDROP
+================================= */
+
+.viral-backdrop{
+  position:absolute;
+  inset:0;
+
+  background:
+    rgba(0,0,0,.72);
+
+  backdrop-filter:blur(8px);
+  -webkit-backdrop-filter:blur(8px);
+}
+
+
+/* =================================
+   MODAL
+================================= */
+
+.viral-modal{
+  position:relative;
+
+  width:min(440px,100%);
+
+  padding:30px;
+
+  border-radius:28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #18181b,
+      #0c0c0e
+    );
+
+  border:1px solid rgba(255,255,255,.1);
+
+  box-shadow:
+    0 30px 100px rgba(0,0,0,.6),
+    0 0 60px rgba(255,59,48,.08);
+
+  color:#fff;
+
+  transform:
+    translateY(25px)
+    scale(.94);
+
+  transition:
+    transform .35s cubic-bezier(.2,.8,.2,1);
+}
+
+.viral-popup.active .viral-modal{
+  transform:
+    translateY(0)
+    scale(1);
+}
+
+
+/* =================================
+   CLOSE
+================================= */
+
+.viral-close{
+  position:absolute;
+
+  top:16px;
+  right:16px;
+
+  width:38px;
+  height:38px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:0;
+  border-radius:50%;
+
+  background:rgba(255,255,255,.08);
+  color:#fff;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.viral-close:hover{
+  background:#ff3b30;
+  transform:rotate(90deg);
+}
+
+.viral-close svg{
+  width:19px;
+  height:19px;
+
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+}
+
+
+/* =================================
+   POPUP ICON
+================================= */
+
+.popup-icon{
+  width:64px;
+  height:64px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-bottom:18px;
+
+  border-radius:20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3b30,
+      #ff9500
+    );
+
+  box-shadow:
+    0 12px 35px rgba(255,59,48,.25);
+}
+
+.popup-icon svg{
+  width:34px;
+  height:34px;
+}
+
+
+/* =================================
+   LABEL
+================================= */
+
+.popup-label{
+  display:inline-flex;
+
+  padding:6px 10px;
+
+  margin-bottom:10px;
+
+  border-radius:999px;
+
+  background:rgba(255,59,48,.12);
+
+  color:#ff6b61;
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:.8px;
+}
+
+
+/* =================================
+   TITLE
+================================= */
+
+.viral-modal h2{
+  margin:0;
+
+  font-size:28px;
+  font-weight:800;
+
+  letter-spacing:-.5px;
+}
+
+.viral-modal p{
+  margin:10px 0 22px;
+
+  color:#a1a1aa;
+
+  font-size:14px;
+  line-height:1.65;
+}
+
+
+/* =================================
+   POPUP ITEMS
+================================= */
+
+.popup-items{
+  display:flex;
+  flex-direction:column;
+  gap:9px;
+
+  margin-bottom:22px;
+}
+
+.popup-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  padding:12px;
+
+  border-radius:15px;
+
+  background:rgba(255,255,255,.045);
+
+  border:1px solid rgba(255,255,255,.055);
+}
+
+.item-icon{
+  width:38px;
+  height:38px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:11px;
+
+  background:rgba(255,255,255,.07);
+
+  font-size:18px;
+
+  flex-shrink:0;
+}
+
+.popup-item strong{
+  display:block;
+
+  font-size:13px;
+  font-weight:700;
+}
+
+.popup-item small{
+  display:block;
+
+  margin-top:2px;
+
+  font-size:11px;
+
+  color:#888;
+}
+
+
+/* =================================
+   ACTION
+================================= */
+
+.popup-action{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
+
+  width:100%;
+
+  padding:14px 18px;
+
+  border-radius:15px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ff3b30,
+      #ff6b00
+    );
+
+  color:#fff;
+
+  font-size:14px;
+  font-weight:750;
+
+  text-decoration:none;
+
+  box-shadow:
+    0 10px 30px rgba(255,59,48,.2);
+
+  transition:.25s;
+}
+
+.popup-action:hover{
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 14px 35px rgba(255,59,48,.3);
+}
+
+.popup-action svg{
+  width:18px;
+  height:18px;
+
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+
+
+/* =================================
+   MOBILE
+================================= */
 
 @media(max-width:480px){
 
-.viral-sticky{
-left:10px;
-right:10px;
-bottom:12px;
+  .viral-sticky{
+    left:10px;
+    right:10px;
+    bottom:12px;
+  }
+
+  .viral-btn{
+    padding:13px;
+    gap:11px;
+    border-radius:18px;
+  }
+
+  .viral-icon{
+    width:46px;
+    height:46px;
+    border-radius:14px;
+  }
+
+  .viral-icon svg{
+    width:25px;
+    height:25px;
+  }
+
+  .viral-content strong{
+    font-size:14px;
+  }
+
+  .viral-content span{
+    font-size:11px;
+  }
+
+  .viral-arrow{
+    width:36px;
+    height:36px;
+  }
+
+  .viral-badge{
+    top:-15px;
+    right:13px;
+    font-size:9px;
+    padding:4px 8px;
+  }
+
+  .viral-modal{
+    padding:24px 20px;
+
+    border-radius:24px;
+  }
+
+  .popup-icon{
+    width:56px;
+    height:56px;
+  }
+
+  .popup-icon svg{
+    width:30px;
+    height:30px;
+  }
+
+  .viral-modal h2{
+    font-size:24px;
+  }
+
 }
 
-.viral-btn{
-padding:14px;
-border-radius:18px;
-}
 
-.viral-content strong{
-font-size:15px;
-}
+/* =================================
+   REDUCE MOTION
+================================= */
 
-.viral-content span{
-font-size:12px;
-}
+@media(prefers-reduced-motion:reduce){
 
-.viral-icon{
-width:46px;
-height:46px;
-}
+  .viral-btn::before,
+  .viral-badge{
+    animation:none;
+  }
 
+  .viral-btn,
+  .viral-modal,
+  .viral-popup{
+    transition:none;
+  }
 }
 </style>
-<script src="https://jsc.mgid.com/site/726924.js" async></script>
+
+
 </head>
 <body>
 
@@ -527,7 +1033,7 @@ Targer 15K followers • Sports Channel
 </div>
 
 <div class="desc">
-Get live football streaming updates, match schedules, live scores, highlights, and the latest football news every day.
+Get live score808 football data streaming updates, match schedules, live scores, highlights, and the latest football news every day.
 </div>
 
 <div class="preview">
@@ -583,7 +1089,8 @@ target="_blank">
 
 </a>
 
-</div>
+</div><br/>
+<iframe title='live skor' id='score808frame' loading='lazy' scrolling='no' src='https://cdn.candil.eu.org/p/score-live.html' style='width: 100%; border: none;'></iframe></div>
 
 <div class="footer"><div id='histats_counter'></div>
 Powered by WhatsApp Channels<br>
@@ -593,8 +1100,8 @@ Receive official match updates directly on WhatsApp.
 </div>
 
 </div>
-<div class="viral-sticky">
-  <a href="https://t.co/lG0KxcrGyb" class="viral-btn" aria-label="Info Viral 2026">
+<div class="viral-sticky" id="viralSticky">
+  <button class="viral-btn" id="viralOpen" type="button">
 
     <span class="viral-badge">HOT</span>
 
@@ -615,10 +1122,183 @@ Receive official match updates directly on WhatsApp.
       </svg>
     </div>
 
-  </a>
+  </button>
 </div>
-<div data-type="_mgwidget" data-widget-id="2063860"></div>
-<script>(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq");</script>
+
+
+<!-- =========================
+     POPUP OVERLAY
+========================= -->
+<div class="viral-popup" id="viralPopup" aria-hidden="true">
+
+  <div class="viral-backdrop" id="viralClose"></div>
+
+  <div class="viral-modal" role="dialog" aria-modal="true">
+
+    <button class="viral-close" id="viralCloseBtn" type="button" aria-label="Close">
+      <svg viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6L6 18"/>
+      </svg>
+    </button>
+
+    <div class="popup-icon">
+      <svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13 3l-1 6h4l-5 12 1-8H8l5-10z"/>
+      </svg>
+    </div>
+
+    <span class="popup-label">🔥 TRENDING NOW</span>
+
+    <h2>Info Viral 2026</h2>
+
+    <p>
+      Dapatkan informasi terbaru seputar football,
+      live score, jadwal pertandingan dan berita
+      olahraga yang sedang trending.
+    </p>
+
+    <div class="popup-items">
+
+      <div class="popup-item">
+        <span class="item-icon">⚽</span>
+        <div>
+          <strong>Live Football</strong>
+          <small>Update pertandingan terbaru</small>
+        </div>
+      </div>
+
+      <div class="popup-item">
+        <span class="item-icon">🔥</span>
+        <div>
+          <strong>Trending News</strong>
+          <small>Berita olahraga yang sedang viral</small>
+        </div>
+      </div>
+
+      <div class="popup-item">
+        <span class="item-icon">⚡</span>
+        <div>
+          <strong>Live Updates</strong>
+          <small>Informasi cepat dan terkini</small>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="https://t.co/MPpyx3yZ4Z" class="popup-action">
+      Lihat Sekarang
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h13M13 6l6 6-6 6"/>
+      </svg>
+    </a>
+
+  </div>
+</div>
+<script>
+(function(){
+
+  const sticky   = document.getElementById('viralSticky');
+  const popup    = document.getElementById('viralPopup');
+
+  const openBtn  = document.getElementById('viralOpen');
+  const closeBtn = document.getElementById('viralCloseBtn');
+  const backdrop = document.getElementById('viralClose');
+
+  /* Sticky disembunyikan saat awal */
+  sticky.style.display = 'none';
+
+
+  function openPopup(){
+
+    popup.classList.add('active');
+    popup.setAttribute('aria-hidden','false');
+
+    document.body.style.overflow = 'hidden';
+
+  }
+
+
+  function closePopup(){
+
+    popup.classList.remove('active');
+    popup.setAttribute('aria-hidden','true');
+
+    document.body.style.overflow = '';
+
+    /* Tampilkan sticky */
+    sticky.style.display = 'flex';
+
+    /* Simpan status selama tab/session aktif */
+    sessionStorage.setItem('viralPopupShown','1');
+
+  }
+
+
+  /* =========================
+     AUTO POPUP
+  ========================= */
+
+  window.addEventListener('load', function(){
+
+    const alreadyShown =
+      sessionStorage.getItem('viralPopupShown');
+
+    if(!alreadyShown){
+
+      setTimeout(function(){
+
+        openPopup();
+
+      }, 1500);
+
+    }else{
+
+      /* Jika sudah pernah ditutup */
+      sticky.style.display = 'flex';
+
+    }
+
+  });
+
+
+  /* =========================
+     STICKY → POPUP
+  ========================= */
+
+  openBtn.addEventListener('click', function(){
+
+    sticky.style.display = 'none';
+
+    openPopup();
+
+  });
+
+
+  /* =========================
+     CLOSE
+  ========================= */
+
+  closeBtn.addEventListener('click', closePopup);
+
+  backdrop.addEventListener('click', closePopup);
+
+
+  /* =========================
+     ESC
+  ========================= */
+
+  document.addEventListener('keydown', function(e){
+
+    if(e.key === 'Escape' && popup.classList.contains('active')){
+
+      closePopup();
+
+    }
+
+  });
+
+})();
+</script>
 	<script type='text/javascript'>var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4858913,4,601,110,30,00000100']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -636,5 +1316,14 @@ hs.src = ('');
 <script>//<![CDATA[
 var LazyHistats=!1;window.addEventListener("scroll",function(){(0!=document.documentElement.scrollTop&&LazyHistats===!1||0!=document.body.scrollTop&&LazyHistats===!1)&&(!function(){var e=document.createElement("script");e.type="text/javascript",e.async=!0,e.src="https://s10.histats.com/js15_as.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}(),LazyHistats=!0)},!0);
 //]]></script>
+ <script>
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://cdn.candil.eu.org") return;
+    const iframe = document.getElementById("score808frame");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
+</script>
 </body>
 </html>
