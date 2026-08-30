@@ -197,6 +197,8 @@
 
 .bio-links{width:100%;max-width:700px;margin:24px auto;display:flex;flex-direction:column;gap:14px}.bio-btn{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 18px;text-decoration:none;color:#fff;background:#111827;border:1px solid rgb(255 255 255 / .08);border-radius:18px;transition:.25s;box-shadow:0 8px 24px rgb(0 0 0 / .12)}.bio-btn:hover{transform:translateY(-2px);border-color:#38bdf8;box-shadow:0 12px 28px rgb(14 165 233 / .18)}.bio-btn-left{display:flex;align-items:center;gap:14px;flex:1;min-width:0}.bio-icon{width:52px;height:52px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:16px;background:linear-gradient(135deg,#0ea5e9,#2563eb)}.bio-icon svg{width:26px;height:26px;color:#fff}.bio-text{flex:1;min-width:0}.bio-text strong{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bio-text strong::before{content:"";width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 8px #22c55e;flex-shrink:0}.bio-text span{display:block;margin-top:5px;font-size:13px;color:#94a3b8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.bio-arrow{width:42px;height:42px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgb(255 255 255 / .06);transition:.25s}.bio-arrow svg{width:18px;height:18px;color:#fff}.bio-btn:hover .bio-arrow{background:#0ea5e9;transform:translateX(3px)}@media(max-width:768px){.bio-links{gap:12px}.bio-btn{padding:15px}.bio-icon{width:48px;height:48px}.bio-icon svg{width:24px;height:24px}.bio-text strong{font-size:15px}.bio-text span{font-size:12px}.bio-arrow{width:40px;height:40px}}@media(max-width:480px){.bio-btn{padding:14px;gap:12px}.bio-btn-left{gap:12px}.bio-icon{width:44px;height:44px}.bio-icon svg{width:22px;height:22px}.bio-text strong{font-size:14px}.bio-text span{font-size:11px}.bio-arrow{width:36px;height:36px}.bio-arrow svg{width:16px;height:16px}}@media(max-width:360px){.bio-btn{padding:12px}.bio-icon{width:40px;height:40px}.bio-text strong{font-size:13px}.bio-text span{font-size:10px}.bio-arrow{width:34px;height:34px}}.post-body .bio-btn{display:flex!important;width:100%;max-width:none;align-items:center;justify-content:space-between;text-decoration:none;box-sizing:border-box}.ads-box{position:relative;z-index:1!important}.channel-bar,.player-actions,.bio-links{position:relative!important;z-index:10000!important;isolation:isolate}
 .event-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:11px 20px;border-radius:12px;color:#fff;background:linear-gradient(135deg,#2563eb,#4f46e5);font-size:14px;font-weight:800;letter-spacing:.2px;text-decoration:none;border:1px solid rgb(255 255 255 / .12);box-shadow:0 8px 24px rgb(37 99 235 / .25),inset 0 1px 0 rgb(255 255 255 / .15);transition:transform .2s ease,box-shadow .2s ease,filter .2s ease}.event-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.event-btn:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 12px 30px rgb(37 99 235 / .35),inset 0 1px 0 rgb(255 255 255 / .2)}.event-btn:active{transform:translateY(0)}
+
+.event-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px}.event-btn svg{width:20px;height:20px;flex:0 0 20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}.event-btn svg circle{fill:currentColor;stroke:none;transform-box:fill-box;transform-origin:center;animation:liveDot 1.4s ease-in-out infinite}@keyframes liveDot{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.72)}}@media (prefers-reduced-motion:reduce){.event-btn svg circle{animation:none}}
 </style>
 <!--<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6264483052991753"
      crossorigin="anonymous"></script>-->
@@ -246,12 +248,14 @@
     </a>-->
   <a href="https://tigoals.candil.eu.org/"
 class="join-btn event-btn"
-aria-label="View Event Today">
+aria-label="View Live Events Today">
 
   <svg viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M7 2v3M17 2v3M3.5 9.5h17"/>
-    <rect x="3.5" y="4.5" width="17" height="17" rx="2.5"/>
-    <path d="M7.5 13h2M14.5 13h2M7.5 17h2M14.5 17h2"/>
+    <circle cx="12" cy="12" r="2.2"/>
+    <path d="M7.8 7.8a6 6 0 0 0 0 8.4"/>
+    <path d="M16.2 7.8a6 6 0 0 1 0 8.4"/>
+    <path d="M4.8 4.8a10.2 10.2 0 0 0 0 14.4"/>
+    <path d="M19.2 4.8a10.2 10.2 0 0 1 0 14.4"/>
   </svg>
 
 Event Today </a>
