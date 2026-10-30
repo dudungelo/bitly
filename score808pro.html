@@ -412,6 +412,9 @@ font-size:10px;
 
 }
 </style>
+ <style>
+#recent-posts-container ul.recent-posts{margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}#recent-posts-container ul.recent-posts li{display:flex;flex-direction:column;list-style-type:none;margin:0;padding:0;border:1px solid rgba(128,128,128,.25);border-radius:8px;overflow:hidden;transition:border-color .15s,box-shadow .15s}#recent-posts-container ul.recent-posts li:hover{border-color:currentColor;box-shadow:0 2px 8px rgba(0,0,0,.08)}#recent-posts-container ul.recent-posts li .post-thumb{width:100%}#recent-posts-container ul.recent-posts li .post-thumb img{width:100%;height:auto;display:block}#recent-posts-container ul.recent-posts li strong.post-title{margin:0;padding:12px;font-size:15px;line-height:1.4}#recent-posts-container ul.recent-posts li .post-thumb+strong.post-title{padding-top:0}#recent-posts-container ul.recent-posts li a{color:inherit;text-decoration:none}#recent-posts-container ul.recent-posts li a:hover{text-decoration:underline}#recent-posts-container ul.recent-posts li::before{display:none}#recent-posts-container .recent-loading{display:flex;align-items:center;gap:10px;padding:14px 6px;opacity:.7}#recent-posts-container .recent-loading::before{content:"";flex:none;width:18px;height:18px;border:2px solid currentColor;border-top-color:transparent;border-radius:50%;animation:rpspin .7s linear infinite}@keyframes rpspin{to{transform:rotate(360deg)}}
+</style>
 <script src="https://jsc.mgid.com/site/726924.js" async></script>
 </head>
 
@@ -473,7 +476,6 @@ Cari Jadwal di Google
 </svg>
 Lihat Live Score Terbaru
 </div>-->
-<!--<iframe id='score808frame' loading='lazy' title='tigoals highlights' scrolling='no' src='https://cdn.candil.eu.org/p/today-match.html' style='width: 100%; border: none;'></iframe>-->
 <a href="https://bitly.candil.eu.org/sports"
 target="_blank"
 class="btn btn-news">
@@ -510,6 +512,12 @@ WhatsApp
 </a>
 
 </div>
+ <!-- HTML -->
+<div id="recent-posts-container"></div>
+
+<!-- CSS -->
+
+<iframe id='score808frame' loading='lazy' title='tigoals highlights' scrolling='no' src='https://cdn.candil.eu.org/p/cuplikan.html' style='width: 100%; border: none;'></iframe>
 
 </div>
 <div class="seo">
@@ -596,7 +604,7 @@ function goSearch(){
 window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(q);}
 
 </script>-->
-<!--<script>//<![CDATA[ 
+<script>//<![CDATA[ 
 window.addEventListener("message", function(e) {
     if (e.origin !== "https://cdn.candil.eu.org") return;
     const iframe = document.getElementById("score808frame");
@@ -604,6 +612,10 @@ window.addEventListener("message", function(e) {
       iframe.style.height = e.data.height + "px";
     }
   });
-  //]]> </script>-->
+  //]]> </script>
+ <!-- JAVASCRIPT -->
+<script>
+let recentPostsConfig = { blogURL: "https://tigoals.candil.eu.org/", labelName: "", maxPosts : 12, hasThumb : true, containerID: "recent-posts-container", thumbAspectRatio: "1:1",};const{blogURL:t,maxPosts:e,hasThumb:n,containerID:s,thumbAspectRatio:l,labelName:r}=recentPostsConfig,feedUrl=""!==r?t+"/feeds/posts/summary/-/"+encodeURIComponent(r)+"?alt=json":t+"/feeds/posts/summary?alt=json";!function(){let t="",r=document.getElementById(s),o=160,a=160,c;function i(t){return t=(t=(t=t.replace(/.*?:\/\//g,"//")).replace(/\/[w,s][0-9][0-9].*\//g,"/w"+o+"-h"+a+"-c-rw/")).replace(/=s72-[w,c].*/g,"=w"+o+"-h"+a+"-c-rw")}"16:9"===l&&(o=160,a=90),"3:2"===l&&(o=160,a=107),c="https://1.bp.blogspot.com/-sLMytth04W8/XtoBMx9lUjI/AAAAAAAAHmM/zK-toM5XTacePvBHnpIO_tfzjg63BD3ZgCK4BGAsYHg/w"+o+"-h"+a+"-n-k-no-nu/nomage%2B%25281%2529.png",r&&(r.innerHTML='<div class="recent-loading">Memuat…</div>'),fetch(feedUrl).then(t=>{if(!t.ok)throw Error("Gagal memuat recent posts");return t.json()}).then(s=>{!function s(l){let g=l.feed.entry;if(!r){console.log("Container not found.");return}if(!g||0===g.length){r.innerHTML="<p>No posts.</p>";return}t+='<ul class="recent-posts">';for(let h=0;h<e&&g.length!==h;++h){let f=g[h],u,m=f.media$thumbnail?f.media$thumbnail.url:c,p=f.title.$t;if(f.link.forEach(function(t){"alternate"===t.rel&&(u=t.href)}),f.content&&m===c){let d=/<img +(.*?)src=(['"])([^'"]+?)(['"])(.*?) *\/?>/i.exec(f.content.$t);m=d&&d[3]?d[3]:c}m=i(m),t+="<li>",n&&(t+='<div class="post-thumb"><a href="'+u+'">',t+='<img width="'+o+'" height="'+a+'" alt="'+p.replace(/["']/g,"'")+'" src="'+m+'"/>',t+="</a></div>"),t+='<strong class="post-title"><a href="'+u+'">'+p+"</a></strong>",t+="</li>"}t+="</ul>",r.innerHTML=t}(s)}).catch(t=>{console.log(t.message)})}();
+</script>
 </body>
 </html>
