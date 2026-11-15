@@ -302,6 +302,11 @@
         </div>
         <span class="section-note">From Score808pro</span>
       </div>
+       <iframe id="score808framescore" class="embed-frame" loading="lazy"
+        title="Football Live Score and match information"
+        src="https://cdn.candil.eu.org/p/live-score.html"
+        scrolling="no" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      
       <div id="recent-posts-container" aria-live="polite">
         <div class="recent-loading">Loading the latest articles...</div>
       </div>
@@ -374,7 +379,13 @@ window.addEventListener("message", function(e) {
       iframe.style.height = e.data.height + "px";
     }
   });
-
+window.addEventListener("message", function(e) {
+    if (e.origin !== "https://cdn.candil.eu.org") return;
+    const iframe = document.getElementById("score808framescore");
+    if (e.data && e.data.height) {
+      iframe.style.height = e.data.height + "px";
+    }
+  });
     // Load the latest posts from the Blogger JSON feed.
     (function() {
       "use strict";
